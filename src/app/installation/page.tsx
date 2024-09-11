@@ -1,6 +1,5 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Installation from "@/components/Installation";
-import sharedMeta from "../sharedMeta";
 
 import { Metadata } from "next";
 
@@ -8,7 +7,6 @@ export const metadata: Metadata = {
   title: "Installation | CocktailBerry",
   description:
     "Installation instructions for CocktailBerry. Let's start your cocktail journey!",
-  ...sharedMeta,
 };
 
 const InstallationPage = () => {
