@@ -7,7 +7,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "CocktailBerry: Cocktails with Raspberry Pi",
   description:
-    "Welcome to CocktailBerry, start your journey of building your own, personal cocktail maker.",
+    "Welcome to CocktailBerry! Start your journey of building your own, personal cocktail maker.",
 };
 
 export default function Home() {
