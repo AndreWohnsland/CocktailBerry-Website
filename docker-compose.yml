@@ -1,0 +1,5 @@
+services:
+  cocktailberry-website:
+    build: ./
+    ports:
+      - "3000:3000"
