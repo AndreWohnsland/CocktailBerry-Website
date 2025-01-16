@@ -15,11 +15,11 @@ const Hero = () => {
                   Free and Open-Source Software for your Cocktail Machine
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  CocktailBerry is a Python and Qt based app for a cocktail
-                  machine on the Raspberry Pi. It enables you to build your own,
-                  fully customized machine, while still being able to use the
-                  identical software on each machine. Detailed information,
-                  installation steps and set up can be found at the
+                  CocktailBerry is a Python and Qt (or React) based app for a
+                  cocktail machine on the Raspberry Pi. It enables you to build
+                  your own, fully customized machine, while still being able to
+                  use the identical software on each machine. Detailed
+                  information, installation steps and set up can be found at the
                   documentation.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
