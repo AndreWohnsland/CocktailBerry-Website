@@ -15,7 +15,7 @@ const Impressions = () => {
         <div className="container">
           <SectionTitle
             title="CocktailBerry User Interface"
-            paragraph="There are multiple main pages for you to interact with, especially the two maker views will be the place for your users."
+            paragraph="There are multiple main pages for you to interact with, especially the two maker views will be the place for your users. Note that pictures are currently just v1 not v2."
             center
             width="665px"
             mb="2rem"
@@ -42,7 +42,7 @@ const Impressions = () => {
         <div className="container">
           <SectionTitle
             title="Machine Examples"
-            paragraph="Here's a brief overview of some build and release machines. You might find inspiration to create your own."
+            paragraph="Here's a brief overview of some build and released machines. You might find inspiration to create your own."
             center
             width="665px"
             mb="2rem"
