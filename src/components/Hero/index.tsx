@@ -22,7 +22,7 @@ const Hero = () => {
                   information, installation steps and set up can be found at the
                   documentation.
                 </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <div className="mb-12 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
                     href="/installation#prerequisite"
                     className="rounded-sm bg-primary px-4 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
@@ -40,6 +40,12 @@ const Hero = () => {
                     className="inline-block rounded-sm bg-black px-4 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
                     🌟 Star on GitHub
+                  </Link>
+                  <Link
+                    href="https://demo.cocktailberry.org"
+                    className="rounded-sm bg-primary px-4 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                  >
+                    🍸 v2 Demo
                   </Link>
                 </div>
               </div>
