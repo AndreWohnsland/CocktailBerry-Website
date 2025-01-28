@@ -43,7 +43,7 @@ const menuData: Menu[] = [
         newTab: true,
       },
       {
-        id: 43,
+        id: 44,
         title: "Demo App",
         path: "https://demo.cocktailberry.org",
         newTab: true,
