@@ -42,6 +42,12 @@ const menuData: Menu[] = [
         path: "https://stats-cocktailberry.streamlit.app/",
         newTab: true,
       },
+      {
+        id: 43,
+        title: "Demo App",
+        path: "https://demo.cocktailberry.org",
+        newTab: true,
+      },
     ],
   },
 ];
