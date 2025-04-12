@@ -2,8 +2,12 @@
 const nextConfig = {
   output: "standalone",
   images: {
-    domains: ["localhost"],
     remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "",
+      },
       {
         protocol: "https",
         hostname: "www.cocktailberry.org",
