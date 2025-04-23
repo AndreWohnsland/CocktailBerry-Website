@@ -19,7 +19,7 @@ const Hero = () => {
                   custom cocktail machines on the Raspberry Pi or other SBCs.
                   Leveraging Python, Qt, and React, it offers a flexible and
                   scalable solution for creating unique automated bartending
-                  experiences. Whether you're building a single machine or
+                  experiences. Whether you are building a single machine or
                   deploying a fleet, CocktailBerry provides consistent software
                   across all installations. Detailed information, installation
                   steps and set up can be found at the documentation.
