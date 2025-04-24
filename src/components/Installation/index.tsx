@@ -1,6 +1,6 @@
 import SectionTitle from "../Common/SectionTitle";
 import TiltStreakBg from "../Common/TiltStreakBg";
-import SingleFeature from "../Features/SingleFeature";
+import SingleFeature from "../Common/SingleFeature";
 import prerequisiteData from "./prerequisiteData";
 import { Snippet } from "@nextui-org/snippet";
 
@@ -71,7 +71,7 @@ const Installation = () => {
           </Snippet>
         </div>
         <div
-          className="mx-auto w-full px-4 text-center "
+          className="mx-auto w-full px-4 text-center"
           style={{ maxWidth: "800px" }}
         >
           <p className="text-base !leading-relaxed text-body-color md:text-lg">
