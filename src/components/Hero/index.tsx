@@ -22,7 +22,7 @@ const Hero = () => {
                   experiences. Whether you are building a single machine or
                   deploying a fleet, CocktailBerry provides consistent software
                   across all installations. Detailed information, installation
-                  steps and set up can be found at the documentation.
+                  steps and set up can be found in the documentation.
                 </p>
                 <div className="mb-12 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
