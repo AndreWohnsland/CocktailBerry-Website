@@ -12,15 +12,15 @@ const Hero = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Free and Open-Source Software for your Cocktail Machine
+                  Open-Source Cocktail Machine Software for Raspberry Pi
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                   CocktailBerry is a powerful open-source platform for building
-                  custom cocktail machines on the Raspberry Pi or other SBCs.
+                  custom cocktail machines and automated cocktail makers on the Raspberry Pi or other SBCs.
                   Leveraging Python, Qt, and React, it offers a flexible and
                   scalable solution for creating unique automated bartending
-                  experiences. Whether you are building a single machine or
-                  deploying a fleet, CocktailBerry provides consistent software
+                  experiences and DIY drink dispensers. Whether you are building a single cocktail machine or
+                  deploying a fleet, CocktailBerry provides consistent cocktail maker software
                   across all installations. Detailed information, installation
                   steps and set up can be found in the documentation.
                 </p>
