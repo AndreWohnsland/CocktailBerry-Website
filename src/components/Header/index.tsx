@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/routing";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
+import LanguageSwitcher from "./LanguageSwitcher";
 import menuData from "./menuData";
+import { useTranslations } from "next-intl";
 
 const Header = () => {
   // Navbar toggle
@@ -38,6 +39,7 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
+  const t = useTranslations("header");
 
   return (
     <>
@@ -106,7 +108,7 @@ const Header = () => {
                   }`}
                 >
                   <ul className="block lg:flex lg:space-x-12">
-                    {menuData.map((menuItem, index) => (
+                    {menuData(t).map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <Link
@@ -159,14 +161,15 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
+              <div className="flex items-center justify-end gap-2 pr-16 lg:pr-0">
+                <a
                   href="https://github.com/AndreWohnsland/CocktailBerry"
                   className="ease-in-up mr-1 hidden rounded-sm bg-primary px-4 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block"
                 >
                   <GitHubIcon />
                   <span className="pl-2">Source Code</span>
-                </Link>
+                </a>
+                <LanguageSwitcher />
                 <div>
                   <ThemeToggler />
                 </div>

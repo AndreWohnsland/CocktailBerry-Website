@@ -1,6 +1,6 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Impressions from "@/components/Impressions";
-
+import { useTranslations } from "next-intl";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,16 +12,16 @@ export const metadata: Metadata = {
   },
 };
 
-const AboutPage = () => {
+export default function AboutPage() {
+  const t = useTranslations("pages.impressions");
+  
   return (
     <>
       <Breadcrumb
-        pageName="Impressions"
-        description="Here you can find an overview of the program interface, as well as some machines idling or in action."
+        pageName={t("title")}
+        description={t("description")}
       />
       <Impressions />
     </>
   );
-};
-
-export default AboutPage;
+}

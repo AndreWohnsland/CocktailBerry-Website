@@ -1,0 +1,93 @@
+{
+  "header": {
+    "menu": {
+      "home": "Home",
+      "impressions": "Impressions",
+      "installation": "Installation",
+      "resources": "Ressources",
+      "documentation": "Documentation",
+      "githubSource": "GitHub Source Code",
+      "cocktailStats": "CocktailBerry Stats",
+      "demoApp": "Demo App"
+    }
+  },
+  "hero": {
+    "title": "Free and Open-Source Software for your Cocktail Machine",
+    "description": "CocktailBerry is a powerful open-source platform for building custom cocktail machines on the Raspberry Pi or other SBCs. Leveraging Python, Qt, and React, it offers a flexible and scalable solution for creating unique automated bartending experiences. Whether you are building a single machine or deploying a fleet, CocktailBerry provides consistent software across all installations. Detailed information, installation steps and set up can be found in the documentation.",
+    "getStarted": "🔥 Get Started",
+    "documentation": "📖 Documentation",
+    "starGithub": "🌟 Star on GitHub",
+    "v2Demo": "🍸 v2 Demo"
+  },
+  "features": {
+    "easySetup": {
+      "title": "Easy to Set-Up",
+      "description": "On a fresh Raspberry Pi, one command is all you need. The tool will make the rest for you. Lay back, grab a drink, and come back to a fully functional cocktail maker."
+    },
+    "configuration": {
+      "title": "Configuration over the App",
+      "description": "Once installed, just run the software and go to the settings. Here you can configure everything to your liking and the state of your machine."
+    },
+    "customCocktails": {
+      "title": "Customize your Cocktails",
+      "description": "You can manage change, add or delete all the cocktail data over the app. This includes ingredients and recipes, things to add via hand and pumping order."
+    },
+    "multiLanguage": {
+      "title": "Multi Language Support",
+      "description": "The app is available in multiple languages. You can easily switch between them in the settings. If you want to, you can even provide translation for your language."
+    },
+    "addOns": {
+      "title": "Supports Add-Ons",
+      "description": "Missing some custom feature? Just add it! The software is designed to be easily extendable. You can add your own features and even share them with the community."
+    },
+    "batteriesIncluded": {
+      "title": "Batteries Included",
+      "description": "Many additional nice things to have: Custom app themes, cleaning program, data visualization and export, LED + NFC support, option to send data to webhooks and more."
+    }
+  },
+  "testimonials": {
+    "title": "What Our Users Say",
+    "subtitle": "CocktailBerry especially brings joy to people who just want to build, but not program. In case you want to program, add-ons also provide an easy way to extend the functionality.",
+    "thomas": {
+      "name": "Thomas",
+      "designation": "Builder of a Machine",
+      "content": "A few inputs and the code was running! I was totally amazed, especially by the extent of the software and the clean, well-designed interface."
+    },
+    "adnan": {
+      "name": "Adnan",
+      "designation": "Builder of multiple Machines",
+      "content": "I've tried a few cocktail software programs, and I have to say, yours is the one that's the best structured."
+    },
+    "marvin": {
+      "name": "Marvin",
+      "designation": "User of the Software",
+      "content": "It's great to see how much effort you put in, and that it's not a project that gets abandoned after just one or two updates."
+    }
+  },
+  "footer": {
+    "description": "Start the journey of building your own, personal cocktail maker.",
+    "usefulLinks": "Useful Links",
+    "documentation": "Documentation",
+    "githubSource": "GitHub Source Code",
+    "cocktailStats": "Cocktail Stats",
+    "terms": "Terms",
+    "imprint": "Imprint",
+    "supportHelp": "Support & Help",
+    "faq": "FAQ",
+    "openGithubIssue": "Open GitHub Issue",
+    "askDiscussions": "Ask in Discussions"
+  },
+  "breadcrumb": {
+    "home": "Home"
+  },
+  "pages": {
+    "installation": {
+      "title": "Installation",
+      "description": "CocktailBerry was designed to work even if you do not have programming knowledge at all. You just need to type a command in a window."
+    },
+    "impressions": {
+      "title": "Impressions",
+      "description": "Here you can find an overview of the program interface, as well as some machines idling or in action."
+    }
+  }
+}

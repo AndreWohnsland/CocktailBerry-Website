@@ -1,6 +1,6 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Installation from "@/components/Installation";
-
+import { useTranslations } from "next-intl";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,16 +12,16 @@ export const metadata: Metadata = {
   },
 };
 
-const InstallationPage = () => {
+export default function InstallationPage() {
+  const t = useTranslations("pages.installation");
+  
   return (
     <>
       <Breadcrumb
-        pageName="Installation"
-        description="CocktailBerry was designed to work even if you do not have programming knowledge at all. You just need to type a command in a window."
+        pageName={t("title")}
+        description={t("description")}
       />
       <Installation />
     </>
   );
-};
-
-export default InstallationPage;
+}
