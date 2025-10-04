@@ -1,6 +1,6 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Impressions from "@/components/Impressions";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AboutPage() {
-  const t = useTranslations("pages.impressions");
+export default async function AboutPage() {
+  const t = await getTranslations("pages.impressions");
   
   return (
     <>

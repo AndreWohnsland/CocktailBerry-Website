@@ -1,6 +1,6 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Installation from "@/components/Installation";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function InstallationPage() {
-  const t = useTranslations("pages.installation");
+export default async function InstallationPage() {
+  const t = await getTranslations("pages.installation");
   
   return (
     <>
