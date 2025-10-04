@@ -12,8 +12,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function InstallationPage() {
-  const t = await getTranslations("pages.installation");
+export default async function InstallationPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pages.installation" });
   
   return (
     <>

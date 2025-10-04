@@ -12,8 +12,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function AboutPage() {
-  const t = await getTranslations("pages.impressions");
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pages.impressions" });
   
   return (
     <>
