@@ -4,9 +4,12 @@ import Impressions from "@/components/Impressions";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressions | CocktailBerry",
+  title: "Cocktail Machine Gallery",
   description:
-    "Have some insights about CocktailBerry: How does the program look like? What machines are build?",
+    "CocktailBerry cocktail machines in action. See custom-built Raspberry Pi cocktail makers and DIY drink dispensers created by our community.",
+  alternates: {
+    canonical: "https://cocktailberry.org/impressions",
+  },
 };
 
 const AboutPage = () => {
