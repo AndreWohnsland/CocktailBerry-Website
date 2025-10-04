@@ -3,7 +3,7 @@ import Imprint from "@/components/Imprint";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Imprint | CocktailBerry",
+  title: "Imprint",
   description: "CocktailBerry: Imprint page",
 };
 

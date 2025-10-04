@@ -4,9 +4,12 @@ import Installation from "@/components/Installation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Installation | CocktailBerry",
+  title: "Installation Guide",
   description:
-    "Installation instructions for CocktailBerry. Let's start your cocktail journey!",
+    "Step-by-step installation guide for CocktailBerry cocktail machine software. Easy setup on Raspberry Pi for your DIY cocktail maker. No programming knowledge required.",
+  alternates: {
+    canonical: "https://cocktailberry.org/installation",
+  },
 };
 
 const InstallationPage = () => {
