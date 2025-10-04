@@ -29,7 +29,7 @@ const LanguageSwitcher = () => {
         aria-label="Switch language"
       >
         <span className="text-xl">{currentLanguage?.flag}</span>
-        <span className="hidden sm:inline">{currentLanguage?.label}</span>
+        <span className="hidden w-16 sm:inline">{currentLanguage?.label}</span>
         <svg
           className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
           fill="none"
