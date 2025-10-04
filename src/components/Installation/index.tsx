@@ -1,10 +1,14 @@
+"use client";
 import SectionTitle from "../Common/SectionTitle";
 import TiltStreakBg from "../Common/TiltStreakBg";
 import SingleFeature from "../Common/SingleFeature";
 import prerequisiteData from "./prerequisiteData";
 import { Snippet } from "@nextui-org/snippet";
+import { useTranslations } from "next-intl";
 
 const Installation = () => {
+  const t = useTranslations("installation");
+  
   return (
     <>
       <section
@@ -13,8 +17,8 @@ const Installation = () => {
       >
         <div className="container">
           <SectionTitle
-            title="Prerequisites"
-            paragraph="This is all you need to set up before installing CocktailBerry."
+            title={t("prerequisites.title")}
+            paragraph={t("prerequisites.subtitle")}
             center
             width="665px"
           />
@@ -28,8 +32,8 @@ const Installation = () => {
       <section id="steps" className="relative z-10 py-10">
         <div className="container">
           <SectionTitle
-            title="Installation Steps"
-            paragraph="Once you are ready and set up, let's install CocktailBerry on your device! With your terminal open, copy and paste the following command. Now it's time to sit back and relax."
+            title={t("steps.title")}
+            paragraph={t("steps.subtitle")}
             center
             width="800px"
             mb="3rem"

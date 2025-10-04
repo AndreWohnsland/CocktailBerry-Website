@@ -89,5 +89,25 @@
       "title": "Eindrücke",
       "description": "Hier finden Sie eine Übersicht über die Programmoberfläche sowie einige Maschinen im Leerlauf oder in Aktion."
     }
+  },
+  "installation": {
+    "prerequisites": {
+      "title": "Voraussetzungen",
+      "subtitle": "Das ist alles, was Sie vor der Installation von CocktailBerry einrichten müssen."
+    },
+    "steps": {
+      "title": "Installationsschritte",
+      "subtitle": "Sobald Sie fertig und eingerichtet sind, installieren wir CocktailBerry auf Ihrem Gerät! Öffnen Sie Ihr Terminal, kopieren Sie den folgenden Befehl und fügen Sie ihn ein. Jetzt ist es Zeit, sich zurückzulehnen und zu entspannen."
+    }
+  },
+  "impressions": {
+    "ui": {
+      "title": "CocktailBerry Benutzeroberfläche",
+      "subtitle": "Es gibt mehrere Hauptseiten, mit denen Sie interagieren können. Besonders die zwei Maker-Ansichten werden der Ort für Ihre Benutzer sein. Beachten Sie, dass die Bilder derzeit nur v1 und nicht v2 sind."
+    },
+    "machines": {
+      "title": "Maschinenbeispiele",
+      "subtitle": "Hier ist ein kurzer Überblick über einige gebaute und veröffentlichte Maschinen. Sie könnten Inspiration finden, um Ihre eigene zu bauen."
+    }
   }
 }
