@@ -23,7 +23,7 @@ const Installation = () => {
             width="665px"
           />
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 lg:grid-cols-2 2xl:grid-cols-3">
-            {prerequisiteData.map((feature) => (
+            {prerequisiteData(t).map((feature) => (
               <SingleFeature key={feature.id} feature={feature} />
             ))}
           </div>
@@ -52,21 +52,17 @@ const Installation = () => {
           style={{ maxWidth: "800px" }}
         >
           <p className="text-base !leading-relaxed text-body-color md:text-lg">
-            This will check all the requirements, download the software plus
-            needed packages and create the autostart settings. After that, the
-            machine is already ready to go. When you start the system, the
-            program will run automatically. More information about general
-            installation can be found{" "}
+            {t("steps.afterInstall")}{" "}
             <a
               href="https://docs.cocktailberry.org/installation/"
               className="text-primary underline"
             >
-              in the docs
+              {t("steps.inDocs")}
             </a>
             .
           </p>
           <p className="pt-8 text-base !leading-relaxed text-body-color md:text-lg">
-            If you want to, you can directly start the program with:
+            {t("steps.startProgram")}
           </p>
         </div>
         <div className="snippet-container mx-auto my-12 w-full text-center">
@@ -79,19 +75,17 @@ const Installation = () => {
           style={{ maxWidth: "800px" }}
         >
           <p className="text-base !leading-relaxed text-body-color md:text-lg">
-            The CocktailBerry UI will start and you can set everything up. To
-            get to the settings, go to bottles and click the gear icon. To have
-            a full insight of the setup options you can check the{" "}
+            {t("steps.setupInstructions")}{" "}
             <a
               href="https://docs.cocktailberry.org/setup/"
               className="text-primary underline"
             >
-              official documentation
+              {t("steps.officialDocs")}
             </a>{" "}
-            for that.
+            {t("steps.forThat")}
           </p>
           <p className="pt-8 text-base !leading-relaxed text-body-color md:text-lg">
-            Nice, you are all set up! Enjoy your CocktailBerry experience.
+            {t("steps.allSetUp")}
           </p>
         </div>
       </section>

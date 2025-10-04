@@ -93,11 +93,33 @@
   "installation": {
     "prerequisites": {
       "title": "Voraussetzungen",
-      "subtitle": "Das ist alles, was Sie vor der Installation von CocktailBerry einrichten müssen."
+      "subtitle": "Das ist alles, was Sie vor der Installation von CocktailBerry einrichten müssen.",
+      "hardware": {
+        "title": "Holen Sie sich Ihre Hardware",
+        "description": "Sie benötigen einen Raspberry Pi 3b+/4 oder ähnlich, ein Netzteil, eine SD-Karte (+ Kartenleser) und eine Maus/Tastatur.",
+        "resource": "Vollständige Hardware-Liste"
+      },
+      "prepare": {
+        "title": "Bereiten Sie Ihre Hardware vor",
+        "description": "Installieren Sie das Betriebssystem auf der SD-Karte, stecken Sie die Karte in das Gerät, schließen Sie die Stromversorgung an und schalten Sie es ein.",
+        "resource": "Raspberry Pi OS Installation"
+      },
+      "terminal": {
+        "title": "Öffnen Sie ein Terminal",
+        "description": "Nach dem Hochfahren öffnen Sie ein Terminal Ihrer Wahl. Sie können das integrierte Terminal verwenden oder sich per SSH verbinden.",
+        "resource": "Das Terminal verwenden"
+      }
     },
     "steps": {
       "title": "Installationsschritte",
-      "subtitle": "Sobald Sie fertig und eingerichtet sind, installieren wir CocktailBerry auf Ihrem Gerät! Öffnen Sie Ihr Terminal, kopieren Sie den folgenden Befehl und fügen Sie ihn ein. Jetzt ist es Zeit, sich zurückzulehnen und zu entspannen."
+      "subtitle": "Sobald Sie fertig und eingerichtet sind, installieren wir CocktailBerry auf Ihrem Gerät! Öffnen Sie Ihr Terminal, kopieren Sie den folgenden Befehl und fügen Sie ihn ein. Jetzt ist es Zeit, sich zurückzulehnen und zu entspannen.",
+      "afterInstall": "Dies überprüft alle Anforderungen, lädt die Software und benötigte Pakete herunter und erstellt die Autostart-Einstellungen. Danach ist die Maschine bereits einsatzbereit. Wenn Sie das System starten, wird das Programm automatisch ausgeführt. Weitere Informationen zur allgemeinen Installation finden Sie",
+      "inDocs": "in der Dokumentation",
+      "startProgram": "Wenn Sie möchten, können Sie das Programm direkt starten mit:",
+      "setupInstructions": "Die CocktailBerry-Benutzeroberfläche wird gestartet und Sie können alles einrichten. Um zu den Einstellungen zu gelangen, gehen Sie zu Flaschen und klicken Sie auf das Zahnrad-Symbol. Für einen vollständigen Einblick in die Einrichtungsoptionen können Sie die",
+      "officialDocs": "offizielle Dokumentation",
+      "forThat": "dafür überprüfen.",
+      "allSetUp": "Prima, Sie sind fertig! Viel Spaß mit Ihrer CocktailBerry-Erfahrung."
     }
   },
   "impressions": {
