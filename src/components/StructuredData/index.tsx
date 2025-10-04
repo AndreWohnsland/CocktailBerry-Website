@@ -19,11 +19,6 @@ const StructuredData = () => {
       price: "0",
       priceCurrency: "USD",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      ratingCount: "1",
-    },
     keywords:
       "cocktail machine, cocktail maker, raspberry pi, automated bartender, cocktail software, diy cocktail machine, drink dispenser, cocktail automation",
   };
