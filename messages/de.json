@@ -20,6 +20,8 @@
     "v2Demo": "🍸 v2 Demo"
   },
   "features": {
+    "title": "Hauptfunktionen",
+    "subtitle": "CocktailBerry bietet von Haus aus vielseitige Funktionen. Entdecken Sie einige der wichtigsten Vorteile.",
     "easySetup": {
       "title": "Einfache Installation",
       "description": "Auf einem frischen Raspberry Pi brauchen Sie nur einen Befehl. Das Tool erledigt den Rest für Sie. Lehnen Sie sich zurück, holen Sie sich ein Getränk und kehren Sie zu einem voll funktionsfähigen Cocktailmacher zurück."
