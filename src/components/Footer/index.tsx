@@ -1,8 +1,11 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("footer");
+  
   return (
     <>
       <footer className="relative z-10 bg-white pt-10 dark:bg-gray-dark md:pt-12 lg:pt-14">
@@ -27,8 +30,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Start the journey of building your own, personal cocktail
-                  maker.
+                  {t("description")}
                 </p>
               </div>
             </div>
@@ -36,32 +38,32 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-8 lg:mb-12">
                 <h2 className="mb-6 text-xl font-bold text-black dark:text-white">
-                  Useful Links
+                  {t("usefulLinks")}
                 </h2>
                 <ul>
                   <li>
-                    <Link
+                    <a
                       href="https://docs.cocktailberry.org/"
                       className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Documentation
-                    </Link>
+                      {t("documentation")}
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="https://github.com/AndreWohnsland/CocktailBerry"
                       className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      GitHub Source Code
-                    </Link>
+                      {t("githubSource")}
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="https://stats-cocktailberry.streamlit.app/"
                       className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Cocktail Stats
-                    </Link>
+                      {t("cocktailStats")}
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -70,7 +72,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-8 lg:mb-12">
                 <h2 className="mb-6 text-xl font-bold text-black dark:text-white">
-                  Terms
+                  {t("terms")}
                 </h2>
                 <ul>
                   <li>
@@ -78,7 +80,7 @@ const Footer = () => {
                       href="/imprint"
                       className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Imprint
+                      {t("imprint")}
                     </Link>
                   </li>
                 </ul>
@@ -88,32 +90,32 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-8 lg:mb-12">
                 <h2 className="mb-6 text-xl font-bold text-black dark:text-white">
-                  Support & Help
+                  {t("supportHelp")}
                 </h2>
                 <ul>
                   <li>
-                    <Link
+                    <a
                       href="https://docs.cocktailberry.org/faq/"
                       className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      FAQ
-                    </Link>
+                      {t("faq")}
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="https://github.com/AndreWohnsland/CocktailBerry/issues/new/choose"
                       className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Open GitHub Issue
-                    </Link>
+                      {t("openGithubIssue")}
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="https://github.com/AndreWohnsland/CocktailBerry/discussions/new/choose"
                       className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Ask in Discussions
-                    </Link>
+                      {t("askDiscussions")}
+                    </a>
                   </li>
                 </ul>
               </div>

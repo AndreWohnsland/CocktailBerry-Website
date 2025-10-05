@@ -1,11 +1,15 @@
+"use client";
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import StreakBg from "../Common/StreakBg";
 import programImages from "./programImages";
 import machineImages from "./machineImages";
 import TiltStreakBg from "../Common/TiltStreakBg";
+import { useTranslations } from "next-intl";
 
 const Impressions = () => {
+  const t = useTranslations("impressions");
+  
   return (
     <>
       <section
@@ -14,8 +18,8 @@ const Impressions = () => {
       >
         <div className="container">
           <SectionTitle
-            title="CocktailBerry User Interface"
-            paragraph="There are multiple main pages for you to interact with, especially the two maker views will be the place for your users. Note that pictures are currently just v1 not v2."
+            title={t("ui.title")}
+            paragraph={t("ui.subtitle")}
             center
             width="665px"
             mb="2rem"
@@ -41,8 +45,8 @@ const Impressions = () => {
       <section id="cocktailberry-machines" className="relative z-10 py-10">
         <div className="container">
           <SectionTitle
-            title="Machine Examples"
-            paragraph="Here's a brief overview of some build and released machines. You might find inspiration to create your own."
+            title={t("machines.title")}
+            paragraph={t("machines.subtitle")}
             center
             width="665px"
             mb="2rem"
