@@ -1,6 +1,10 @@
-import Link from "next/link";
+"use client";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+  const t = useTranslations("hero");
+
   return (
     <>
       <section
@@ -12,43 +16,42 @@ const Hero = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Free and Open-Source Software for your Cocktail Machine
+                  {t("title")}
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  CocktailBerry is a powerful open-source platform for building
-                  custom cocktail machines on the Raspberry Pi or other SBCs.
-                  Leveraging Python, Qt, and React, it offers a flexible and
-                  scalable solution for creating unique automated bartending
-                  experiences. Whether you are building a single machine or
-                  deploying a fleet, CocktailBerry provides consistent software
-                  across all installations. Detailed information, installation
-                  steps and set up can be found in the documentation.
+                  {t("description")}
                 </p>
                 <div className="mb-12 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
-                    href="/installation#prerequisite"
+                    href={{ pathname: "/installation", hash: "prerequisite" }}
                     className="rounded-sm bg-primary px-4 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    🔥 Get Started
+                    {t("getStarted")}
                   </Link>
-                  <Link
+                  <a
                     href="https://cocktailberry.readthedocs.io/installation/"
                     className="rounded-sm bg-secondary px-4 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-secondary/80"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    📖 Documentation
-                  </Link>
-                  <Link
+                    {t("documentation")}
+                  </a>
+                  <a
                     href="https://github.com/AndreWohnsland/CocktailBerry"
                     className="inline-block rounded-sm bg-black px-4 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    🌟 Star on GitHub
-                  </Link>
-                  <Link
+                    {t("starGithub")}
+                  </a>
+                  <a
                     href="https://demo.cocktailberry.org"
                     className="rounded-sm bg-primary px-4 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    🍸 v2 Demo
-                  </Link>
+                    {t("v2Demo")}
+                  </a>
                 </div>
               </div>
             </div>

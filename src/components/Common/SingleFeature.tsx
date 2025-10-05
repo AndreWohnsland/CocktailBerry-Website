@@ -1,9 +1,11 @@
 import { Feature } from "@/types/feature";
+import { useTranslations } from "next-intl";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, paragraph, ressources } = feature;
+  const t = useTranslations("singleFeature");
   return (
-    <div className="w-full text-center ">
+    <div className="w-full text-center">
       <div className="wow fadeInUp" data-wow-delay=".15s">
         <div className="flex content-center justify-center">
           <div className="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
@@ -17,7 +19,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
           {paragraph}
         </p>
         {/* also add some small header if ressources are given */}
-        {ressources && <h4 className="text-md mt-4">Ressources:</h4>}
+        {ressources && <h4 className="text-md mt-4">{t("resources")}</h4>}
         {/* map the ressources, if there are any, to a list of links below */}
         {ressources && (
           <ul className="mt-1">

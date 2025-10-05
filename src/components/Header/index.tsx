@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/routing";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
+import LanguageSwitcher from "./LanguageSwitcher";
 import menuData from "./menuData";
+import { useTranslations } from "next-intl";
 
 const Header = () => {
   // Navbar toggle
@@ -38,6 +39,7 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
+  const t = useTranslations("header");
 
   return (
     <>
@@ -83,17 +85,17 @@ const Header = () => {
                 >
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[7px] rotate-45" : " "
+                      navbarOpen ? "top-[7px] rotate-45" : " "
                     }`}
                   />
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? "opacity-0 " : " "
+                      navbarOpen ? "opacity-0" : " "
                     }`}
                   />
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[-8px] -rotate-45" : " "
+                      navbarOpen ? "top-[-8px] -rotate-45" : " "
                     }`}
                   />
                 </button>
@@ -106,11 +108,14 @@ const Header = () => {
                   }`}
                 >
                   <ul className="block lg:flex lg:space-x-12">
-                    {menuData.map((menuItem, index) => (
+                    {menuData(t).map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <Link
-                            href={menuItem.path}
+                            href={{
+                              pathname: menuItem.path,
+                              hash: menuItem.hash,
+                            }}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
@@ -142,14 +147,22 @@ const Header = () => {
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
-                              {menuItem.submenu.map((submenuItem, index) => (
-                                <Link
+                              {menuItem.submenu?.map((submenuItem, index) => (
+                                <a
                                   href={submenuItem.path}
                                   key={index}
                                   className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
+                                  target={
+                                    submenuItem.newTab ? "_blank" : undefined
+                                  }
+                                  rel={
+                                    submenuItem.newTab
+                                      ? "noopener noreferrer"
+                                      : undefined
+                                  }
                                 >
                                   {submenuItem.title}
-                                </Link>
+                                </a>
                               ))}
                             </div>
                           </>
@@ -159,14 +172,15 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
+              <div className="flex items-center justify-end gap-2 pr-16 lg:pr-0">
+                <a
                   href="https://github.com/AndreWohnsland/CocktailBerry"
                   className="ease-in-up mr-1 hidden rounded-sm bg-primary px-4 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block"
                 >
                   <GitHubIcon />
                   <span className="pl-2">Source Code</span>
-                </Link>
+                </a>
+                <LanguageSwitcher />
                 <div>
                   <ThemeToggler />
                 </div>
