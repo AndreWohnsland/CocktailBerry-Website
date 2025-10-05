@@ -1,7 +1,17 @@
-export type Menu = {
+import type { AppPathname } from "@/i18n/routing";
+
+export type MenuLink = {
   id: number;
   title: string;
-  path?: string;
   newTab: boolean;
-  submenu?: Menu[];
+};
+
+export type Menu = MenuLink & {
+  path?: AppPathname;
+  hash?: string;
+  submenu?: ExternalMenuLink[];
+};
+
+export type ExternalMenuLink = MenuLink & {
+  path: string;
 };
