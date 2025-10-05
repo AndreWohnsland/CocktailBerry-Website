@@ -1,20 +1,24 @@
+"use client";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "../Common/SingleFeature";
 import featuresData from "./featuresData";
+import { useTranslations } from "next-intl";
 
 const Features = () => {
+  const t = useTranslations("features");
+  
   return (
     <>
       <section id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="Main Features"
-            paragraph="CocktailBerry comes packed with versatile features right out of the box. Explore some of the key benefits."
+            title={t("title")}
+            paragraph={t("subtitle")}
             center
           />
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-            {featuresData.map((feature) => (
+            {featuresData(t).map((feature) => (
               <SingleFeature key={feature.id} feature={feature} />
             ))}
           </div>
