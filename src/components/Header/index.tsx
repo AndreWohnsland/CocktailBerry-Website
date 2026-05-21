@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Link, usePathname } from "@/i18n/routing";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import LanguageSwitcher from "./LanguageSwitcher";
 import menuData from "./menuData";
@@ -14,6 +14,25 @@ const Header = () => {
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
+  const navbarRef = useRef<HTMLElement | null>(null);
+  const navbarToggleRef = useRef<HTMLButtonElement | null>(null);
+
+  // Close the mobile navbar when clicking outside of it
+  useEffect(() => {
+    if (!navbarOpen) return;
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      if (
+        navbarRef.current?.contains(target) ||
+        navbarToggleRef.current?.contains(target)
+      ) {
+        return;
+      }
+      setNavbarOpen(false);
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [navbarOpen]);
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
@@ -78,6 +97,7 @@ const Header = () => {
             <div className="flex w-full items-center justify-between px-4">
               <div>
                 <button
+                  ref={navbarToggleRef}
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
@@ -100,6 +120,7 @@ const Header = () => {
                   />
                 </button>
                 <nav
+                  ref={navbarRef}
                   id="navbarCollapse"
                   className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
@@ -116,6 +137,7 @@ const Header = () => {
                               pathname: menuItem.path,
                               hash: menuItem.hash,
                             }}
+                            onClick={() => setNavbarOpen(false)}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
@@ -151,6 +173,7 @@ const Header = () => {
                                 <a
                                   href={submenuItem.path}
                                   key={index}
+                                  onClick={() => setNavbarOpen(false)}
                                   className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
                                   target={
                                     submenuItem.newTab ? "_blank" : undefined
@@ -175,10 +198,10 @@ const Header = () => {
               <div className="flex items-center justify-end gap-2 pr-16 lg:pr-0">
                 <a
                   href="https://github.com/AndreWohnsland/CocktailBerry"
-                  className="ease-in-up mr-1 hidden rounded-sm bg-primary px-4 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block"
+                  className="ease-in-up mr-1 hidden items-center whitespace-nowrap rounded-sm bg-primary px-4 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:inline-flex"
                 >
                   <GitHubIcon />
-                  <span className="pl-2">Source Code</span>
+                  <span className="pl-2 hidden xl:inline">Source Code</span>
                 </a>
                 <LanguageSwitcher />
                 <div>
