@@ -2,7 +2,7 @@ import { Feature } from "@/types/feature";
 import { useTranslations } from "next-intl";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, paragraph, ressources } = feature;
+  const { icon, title, paragraph, resources } = feature;
   const t = useTranslations("singleFeature");
   return (
     <div className="w-full text-center">
@@ -18,12 +18,12 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         <p className="pr-[10px] text-base font-medium leading-relaxed text-body-color">
           {paragraph}
         </p>
-        {/* also add some small header if ressources are given */}
-        {ressources && <h4 className="text-md mt-4">{t("resources")}</h4>}
-        {/* map the ressources, if there are any, to a list of links below */}
-        {ressources && (
+        {/* also add some small header if resources are given */}
+        {resources && <h4 className="text-md mt-4">{t("resources")}</h4>}
+        {/* map the resources, if there are any, to a list of links below */}
+        {resources && (
           <ul className="mt-1">
-            {ressources.map((resource, index) => (
+            {resources.map((resource, index) => (
               <li key={index}>
                 <a
                   href={resource.url}

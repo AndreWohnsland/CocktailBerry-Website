@@ -1,14 +1,17 @@
-import { Feature } from "@/types/feature";
-import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
-import SpeedIcon from "@mui/icons-material/Speed";
-import LiquorOutlinedIcon from "@mui/icons-material/LiquorOutlined";
+import type { Feature } from "@/types/feature";
 import BatteryChargingFullOutlinedIcon from "@mui/icons-material/BatteryChargingFullOutlined";
-import TranslateOutlinedIcon from "@mui/icons-material/TranslateOutlined";
+import LiquorOutlinedIcon from "@mui/icons-material/LiquorOutlined";
 import PaymentIcon from "@mui/icons-material/Payment";
 import PersonIcon from "@mui/icons-material/Person";
+import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
+import SpeedIcon from "@mui/icons-material/Speed";
 import TerminalOutlinedIcon from "@mui/icons-material/TerminalOutlined";
+import TranslateOutlinedIcon from "@mui/icons-material/TranslateOutlined";
+import type { useTranslations } from "next-intl";
 
-const featuresData = (t: any): Feature[] => [
+type Translator = ReturnType<typeof useTranslations>;
+
+const featuresData = (t: Translator): Feature[] => [
   {
     id: 1,
     icon: <SpeedIcon style={{ fontSize: 60 }} />,
@@ -42,8 +45,8 @@ const featuresData = (t: any): Feature[] => [
   {
     id: 6,
     icon: <PersonIcon style={{ fontSize: 60 }} />,
-    title: t("servicePersonell.title"),
-    paragraph: t("servicePersonell.description"),
+    title: t("servicePersonnel.title"),
+    paragraph: t("servicePersonnel.description"),
   },
   {
     id: 7,

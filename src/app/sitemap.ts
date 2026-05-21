@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pages.forEach((page) => {
       const url = `${baseUrl}/${locale}${page}`;
       const priority = page === "" ? 1 : page === "/imprint" ? 0.5 : 0.8;
-      const changeFrequency =
+      const changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] =
         page === "/impressions"
           ? "weekly"
           : page === "/imprint"
@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       sitemapEntries.push({
         url,
         lastModified: new Date(),
-        changeFrequency: changeFrequency as any,
+        changeFrequency,
         priority,
       });
     });
