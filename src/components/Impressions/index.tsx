@@ -1,15 +1,15 @@
 "use client";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import SectionTitle from "../Common/SectionTitle";
 import StreakBg from "../Common/StreakBg";
-import programImages from "./programImages";
-import machineImages from "./machineImages";
 import TiltStreakBg from "../Common/TiltStreakBg";
-import { useTranslations } from "next-intl";
+import machineImages from "./machineImages";
+import programImages from "./programImages";
 
 const Impressions = () => {
   const t = useTranslations("impressions");
-  
+
   return (
     <>
       <section
@@ -25,9 +25,9 @@ const Impressions = () => {
             mb="2rem"
           />
           <div className="mb-8 flex flex-row flex-wrap justify-center justify-items-center">
-            {programImages.map((image, index) => (
+            {programImages.map((image) => (
               <div
-                key={index}
+                key={image.alt}
                 className="basis-full p-1 lg:basis-1/2 2xl:basis-1/3"
               >
                 <Image
@@ -52,9 +52,9 @@ const Impressions = () => {
             mb="2rem"
           />
           <div className="mb-8 flex flex-row flex-wrap justify-center justify-items-center">
-            {machineImages.map((image, index) => (
+            {machineImages.map((image) => (
               <div
-                key={index}
+                key={image.alt}
                 className="basis-full p-1 lg:basis-1/2 2xl:basis-1/3"
               >
                 <Image
