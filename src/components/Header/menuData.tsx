@@ -1,5 +1,5 @@
-import { Menu } from "@/types/menu";
 import type { useTranslations } from "next-intl";
+import type { Menu } from "@/types/menu";
 
 type Translator = ReturnType<typeof useTranslations>;
 

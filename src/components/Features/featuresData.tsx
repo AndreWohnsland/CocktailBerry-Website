@@ -1,4 +1,3 @@
-import type { Feature } from "@/types/feature";
 import BatteryChargingFullOutlinedIcon from "@mui/icons-material/BatteryChargingFullOutlined";
 import LiquorOutlinedIcon from "@mui/icons-material/LiquorOutlined";
 import PaymentIcon from "@mui/icons-material/Payment";
@@ -8,6 +7,7 @@ import SpeedIcon from "@mui/icons-material/Speed";
 import TerminalOutlinedIcon from "@mui/icons-material/TerminalOutlined";
 import TranslateOutlinedIcon from "@mui/icons-material/TranslateOutlined";
 import type { useTranslations } from "next-intl";
+import type { Feature } from "@/types/feature";
 
 type Translator = ReturnType<typeof useTranslations>;
 

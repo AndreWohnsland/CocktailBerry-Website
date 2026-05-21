@@ -1,7 +1,7 @@
 "use client";
 import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/routing";
 import { useState } from "react";
+import { usePathname, useRouter } from "@/i18n/routing";
 
 const LanguageSwitcher = () => {
   const locale = useLocale();
@@ -24,13 +24,15 @@ const LanguageSwitcher = () => {
   return (
     <div className="relative">
       <button
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 rounded-sm px-3 py-2 text-base font-medium text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+        className="flex items-center gap-2 rounded-sm px-3 py-2 font-medium text-base text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
         aria-label="Switch language"
       >
         <span className="text-xl">{currentLanguage?.flag}</span>
         <span className="hidden w-16 sm:inline">{currentLanguage?.label}</span>
         <svg
+          aria-hidden="true"
           className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
           fill="none"
           stroke="currentColor"
@@ -46,9 +48,10 @@ const LanguageSwitcher = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-full mt-2 w-40 rounded-sm bg-white shadow-lg dark:bg-dark">
+        <div className="absolute top-full right-0 mt-2 w-40 rounded-sm bg-white shadow-lg dark:bg-dark">
           {languages.map((lang) => (
             <button
+              type="button"
               key={lang.code}
               onClick={() => switchLanguage(lang.code)}
               className={`flex w-full items-center gap-2 px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-800 ${

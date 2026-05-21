@@ -1,8 +1,8 @@
-import { Feature } from "@/types/feature";
+import DownloadIcon from "@mui/icons-material/Download";
 import MemoryIcon from "@mui/icons-material/Memory";
 import TerminalIcon from "@mui/icons-material/Terminal";
-import DownloadIcon from "@mui/icons-material/Download";
 import type { useTranslations } from "next-intl";
+import type { Feature } from "@/types/feature";
 
 type Translator = ReturnType<typeof useTranslations>;
 

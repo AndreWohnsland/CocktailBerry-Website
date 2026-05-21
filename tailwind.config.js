@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import { nextui } from "@nextui-org/react";
+
 const colors = require("tailwindcss/colors");
 
 module.exports = {

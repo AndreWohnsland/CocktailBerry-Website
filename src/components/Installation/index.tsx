@@ -1,14 +1,14 @@
 "use client";
-import SectionTitle from "../Common/SectionTitle";
-import TiltStreakBg from "../Common/TiltStreakBg";
-import SingleFeature from "../Common/SingleFeature";
-import prerequisiteData from "./prerequisiteData";
 import { Snippet } from "@nextui-org/snippet";
 import { useTranslations } from "next-intl";
+import SectionTitle from "../Common/SectionTitle";
+import SingleFeature from "../Common/SingleFeature";
+import TiltStreakBg from "../Common/TiltStreakBg";
+import prerequisiteData from "./prerequisiteData";
 
 const Installation = () => {
   const t = useTranslations("installation");
-  
+
   return (
     <>
       <section
@@ -56,7 +56,7 @@ const Installation = () => {
           className="mx-auto w-full px-4 text-center"
           style={{ maxWidth: "800px" }}
         >
-          <p className="text-base !leading-relaxed text-body-color md:text-lg">
+          <p className="!leading-relaxed text-base text-body-color md:text-lg">
             {t("steps.afterInstall")}{" "}
             <a
               href="https://docs.cocktailberry.org/installation/"
@@ -66,7 +66,7 @@ const Installation = () => {
             </a>
             .
           </p>
-          <p className="pt-8 text-base !leading-relaxed text-body-color md:text-lg">
+          <p className="!leading-relaxed pt-8 text-base text-body-color md:text-lg">
             {t("steps.startProgram")}
           </p>
         </div>
@@ -79,7 +79,7 @@ const Installation = () => {
           className="mx-auto w-full px-4 text-center"
           style={{ maxWidth: "800px" }}
         >
-          <p className="text-base !leading-relaxed text-body-color md:text-lg">
+          <p className="!leading-relaxed text-base text-body-color md:text-lg">
             {t("steps.setupInstructions")}{" "}
             <a
               href="https://docs.cocktailberry.org/setup/"
@@ -89,7 +89,7 @@ const Installation = () => {
             </a>{" "}
             {t("steps.forThat")}
           </p>
-          <p className="pt-8 text-base !leading-relaxed text-body-color md:text-lg">
+          <p className="!leading-relaxed pt-8 text-base text-body-color md:text-lg">
             {t("steps.allSetUp")}
           </p>
         </div>

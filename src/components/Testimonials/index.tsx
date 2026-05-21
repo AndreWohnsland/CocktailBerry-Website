@@ -1,13 +1,13 @@
 "use client";
-import { Testimonial } from "@/types/testimonial";
-import SectionTitle from "../Common/SectionTitle";
-import SingleTestimonial from "./SingleTestimonial";
-import StreakBg from "../Common/StreakBg";
 import { useTranslations } from "next-intl";
+import type { Testimonial } from "@/types/testimonial";
+import SectionTitle from "../Common/SectionTitle";
+import StreakBg from "../Common/StreakBg";
+import SingleTestimonial from "./SingleTestimonial";
 
 const Testimonials = () => {
   const t = useTranslations("testimonials");
-  
+
   const testimonialData: Testimonial[] = [
     {
       id: 1,
@@ -33,13 +33,9 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
+    <section className="relative z-10 bg-gray-light py-16 md:py-20 lg:py-28 dark:bg-bg-color-dark">
       <div className="container">
-        <SectionTitle
-          title={t("title")}
-          paragraph={t("subtitle")}
-          center
-        />
+        <SectionTitle title={t("title")} paragraph={t("subtitle")} center />
 
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-10">
           {testimonialData.map((testimonial) => (

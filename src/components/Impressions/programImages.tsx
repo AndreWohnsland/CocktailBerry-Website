@@ -1,11 +1,11 @@
-import mainPic from "../../../public/images/interface/main.png";
-import selectionPic from "../../../public/images/interface/selection.png";
-import ingredientPic from "../../../public/images/interface/ingredients.png";
-import recipePic from "../../../public/images/interface/recipes.png";
 import bottlesPic from "../../../public/images/interface/bottles.png";
-import optionPic from "../../../public/images/interface/option.png";
 import configPic from "../../../public/images/interface/config.png";
 import dataPic from "../../../public/images/interface/data.png";
+import ingredientPic from "../../../public/images/interface/ingredients.png";
+import mainPic from "../../../public/images/interface/main.png";
+import optionPic from "../../../public/images/interface/option.png";
+import recipePic from "../../../public/images/interface/recipes.png";
+import selectionPic from "../../../public/images/interface/selection.png";
 
 const programImages = [
   {
