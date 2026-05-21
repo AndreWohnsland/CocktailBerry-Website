@@ -162,5 +162,9 @@
   },
   "singleFeature": {
     "resources": "Ressourcen:"
+  },
+  "snippet": {
+    "copy": "In Zwischenablage kopieren",
+    "copied": "Kopiert!"
   }
 }
