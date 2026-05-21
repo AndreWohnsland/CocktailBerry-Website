@@ -41,9 +41,14 @@ const Testimonials = () => {
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-10">
           {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+            <div
+              key={testimonial.id}
+              className="flex w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]"
+            >
+              <SingleTestimonial testimonial={testimonial} />
+            </div>
           ))}
         </div>
       </div>
