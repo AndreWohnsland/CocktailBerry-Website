@@ -1,8 +1,8 @@
 "use client";
-import { Snippet } from "@nextui-org/snippet";
 import { useTranslations } from "next-intl";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "../Common/SingleFeature";
+import Snippet from "../Common/Snippet";
 import TiltStreakBg from "../Common/TiltStreakBg";
 import prerequisiteData from "./prerequisiteData";
 
@@ -44,7 +44,7 @@ const Installation = () => {
             mb="3rem"
           />
           <div className="snippet-container mx-auto my-12 w-full text-center">
-            <Snippet style={{ maxWidth: "100%" }}>
+            <Snippet>
               wget -O -
               https://raw.githubusercontent.com/AndreWohnsland/CocktailBerry/master/scripts/all_in_one.sh
               | bash
@@ -56,7 +56,7 @@ const Installation = () => {
           className="mx-auto w-full px-4 text-center"
           style={{ maxWidth: "800px" }}
         >
-          <p className="!leading-relaxed text-base text-body-color md:text-lg">
+          <p className="text-base text-body-color leading-relaxed! md:text-lg">
             {t("steps.afterInstall")}{" "}
             <a
               href="https://docs.cocktailberry.org/installation/"
@@ -66,20 +66,18 @@ const Installation = () => {
             </a>
             .
           </p>
-          <p className="!leading-relaxed pt-8 text-base text-body-color md:text-lg">
+          <p className="pt-8 text-base text-body-color leading-relaxed! md:text-lg">
             {t("steps.startProgram")}
           </p>
         </div>
         <div className="snippet-container mx-auto my-12 w-full text-center">
-          <Snippet style={{ maxWidth: "100%" }}>
-            cd ~ && bash launcher.sh
-          </Snippet>
+          <Snippet>cd ~ && bash launcher.sh</Snippet>
         </div>
         <div
           className="mx-auto w-full px-4 text-center"
           style={{ maxWidth: "800px" }}
         >
-          <p className="!leading-relaxed text-base text-body-color md:text-lg">
+          <p className="text-base text-body-color leading-relaxed! md:text-lg">
             {t("steps.setupInstructions")}{" "}
             <a
               href="https://docs.cocktailberry.org/setup/"
@@ -89,7 +87,7 @@ const Installation = () => {
             </a>{" "}
             {t("steps.forThat")}
           </p>
-          <p className="!leading-relaxed pt-8 text-base text-body-color md:text-lg">
+          <p className="pt-8 text-base text-body-color leading-relaxed! md:text-lg">
             {t("steps.allSetUp")}
           </p>
         </div>
