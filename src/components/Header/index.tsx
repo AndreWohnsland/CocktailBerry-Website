@@ -1,9 +1,9 @@
 "use client";
-import { Link, usePathname } from "@/i18n/routing";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
+import { Link, usePathname } from "@/i18n/routing";
 import LanguageSwitcher from "./LanguageSwitcher";
 import menuData from "./menuData";
 import ThemeToggler from "./ThemeToggler";
@@ -61,7 +61,7 @@ const Header = () => {
     <header
       className={`header top-0 left-0 z-40 flex w-full items-center ${
         sticky
-          ? "!bg-opacity-80 fixed z-[9999] bg-white shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
+          ? "fixed z-9999 bg-white/80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark/80 dark:shadow-sticky-dark"
           : "absolute bg-transparent"
       }`}
     >
@@ -201,7 +201,7 @@ const Header = () => {
             <div className="flex items-center justify-end gap-2 pr-16 lg:pr-0">
               <a
                 href="https://github.com/AndreWohnsland/CocktailBerry"
-                className="mr-1 hidden items-center whitespace-nowrap rounded-sm bg-primary px-4 py-3 font-medium text-base text-white shadow-btn transition duration-300 ease-in-up hover:bg-opacity-90 hover:shadow-btn-hover md:inline-flex"
+                className="mr-1 hidden items-center whitespace-nowrap rounded-sm bg-primary px-4 py-3 font-medium text-base text-white shadow-btn transition duration-300 ease-in-up hover:bg-primary/90 hover:shadow-btn-hover md:inline-flex"
               >
                 <GitHubIcon />
                 <span className="hidden pl-2 xl:inline">Source Code</span>
