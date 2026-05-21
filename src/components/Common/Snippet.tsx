@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 interface SnippetProps {
@@ -36,10 +37,13 @@ const CopyIcon = ({ copied }: { copied: boolean }) => (
 );
 
 const Snippet = ({ children, className = "" }: SnippetProps) => {
+  const t = useTranslations("snippet");
   const [copied, setCopied] = useState(false);
   const text = stringifyChildren(children).trim();
+  const label = copied ? t("copied") : t("copy");
 
-  const handleCopy = async () => {
+  const handleCopy = async (event: React.MouseEvent<HTMLButtonElement>) => {
+    const button = event.currentTarget;
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
@@ -47,6 +51,7 @@ const Snippet = ({ children, className = "" }: SnippetProps) => {
     } catch {
       // noop
     }
+    button.blur();
   };
 
   return (
@@ -57,14 +62,22 @@ const Snippet = ({ children, className = "" }: SnippetProps) => {
       <pre className="m-0 flex-1 overflow-x-auto whitespace-pre-wrap break-all bg-transparent p-0 text-body-color dark:text-body-color-dark">
         {text}
       </pre>
-      <button
-        aria-label={copied ? "Copied" : "Copy to clipboard"}
-        className="shrink-0 rounded p-1 text-body-color transition hover:bg-black/5 hover:text-primary dark:text-body-color-dark dark:hover:bg-white/5"
-        onClick={handleCopy}
-        type="button"
-      >
-        <CopyIcon copied={copied} />
-      </button>
+      <span className="group relative shrink-0">
+        <button
+          aria-label={label}
+          className="cursor-pointer rounded p-1 text-body-color transition hover:bg-black/5 hover:text-primary dark:text-body-color-dark dark:hover:bg-white/5"
+          onClick={handleCopy}
+          type="button"
+        >
+          <CopyIcon copied={copied} />
+        </button>
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-light px-2 py-1 font-sans text-dark text-xs opacity-0 shadow-md transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100 dark:bg-dark dark:text-white"
+        >
+          {label}
+        </span>
+      </span>
     </div>
   );
 };

@@ -162,5 +162,9 @@
   },
   "singleFeature": {
     "resources": "Resources:"
+  },
+  "snippet": {
+    "copy": "Copy to clipboard",
+    "copied": "Copied!"
   }
 }
