@@ -1,8 +1,8 @@
-import { Feature } from "@/types/feature";
 import { useTranslations } from "next-intl";
+import type { Feature } from "@/types/feature";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, paragraph, ressources } = feature;
+  const { icon, title, paragraph, resources } = feature;
   const t = useTranslations("singleFeature");
   return (
     <div className="w-full text-center">
@@ -12,19 +12,19 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
             {icon}
           </div>
         </div>
-        <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+        <h3 className="mb-4 font-bold text-black text-xl sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
           {title}
         </h3>
-        <p className="pr-[10px] text-base font-medium leading-relaxed text-body-color">
+        <p className="pr-[10px] font-medium text-base text-body-color leading-relaxed">
           {paragraph}
         </p>
-        {/* also add some small header if ressources are given */}
-        {ressources && <h4 className="text-md mt-4">{t("resources")}</h4>}
-        {/* map the ressources, if there are any, to a list of links below */}
-        {ressources && (
+        {/* also add some small header if resources are given */}
+        {resources && <h4 className="mt-4 text-md">{t("resources")}</h4>}
+        {/* map the resources, if there are any, to a list of links below */}
+        {resources && (
           <ul className="mt-1">
-            {ressources.map((resource, index) => (
-              <li key={index}>
+            {resources.map((resource) => (
+              <li key={resource.url}>
                 <a
                   href={resource.url}
                   target="_blank"

@@ -12,8 +12,8 @@
     }
   },
   "hero": {
-    "title": "Open-Source Software für deine Cocktail Maschine",
-    "description": "CocktailBerry ist eine umfangreiche Open-Source-Plattform zum Bau individueller Cocktailmaschinen auf dem Raspberry Pi oder anderen SBCs. Mit Python, Qt und React bietet sie eine flexible und skalierbare Lösung für einzigartige automatisierte Barkeeper-Erlebnisse. Ob du eine einzelne Maschine baust oder mehrere einsetzt - CocktailBerry bietet konsistente Software für alle Installationen. Detaillierte Informationen, Installationsschritte und Einrichtungsanleitung findest du in der Dokumentation.",
+    "title": "Open-Source Software für deine Cocktailmaschine",
+    "description": "CocktailBerry ist eine umfangreiche Open-Source-Plattform zum Bau individueller Cocktailmaschinen auf dem Raspberry Pi oder anderen SBCs. Mit Python, Qt und React bietet sie eine flexible und skalierbare Lösung für einzigartige, automatisierte Cocktail-Erlebnisse. Ob du eine einzelne Maschine baust oder mehrere einsetzt - CocktailBerry bietet konsistente Software für alle Installationen. Detaillierte Informationen, Installationsschritte und Einrichtungsanleitung findest du in der Dokumentation.",
     "getStarted": "🔥 Loslegen",
     "documentation": "📖 Dokumentation",
     "starGithub": "🌟 Star Auf GitHub",
@@ -21,7 +21,7 @@
   },
   "features": {
     "title": "Hauptfunktionen",
-    "subtitle": "CocktailBerry bietet von Grund auf vielseitige Funktionen. Entdecke einige der wichtigsten Vorteile.",
+    "subtitle": "CocktailBerry kommt von Anfang an mit vielseitigen Funktionen. Entdecke einige der wichtigsten Vorteile.",
     "easySetup": {
       "title": "Einfache Installation",
       "description": "Auf einem neuen Raspberry Pi brauchst du nur einen Befehl. Das Tool erledigt den Rest für dich. Lehn' dich zurück, hol dir ein Getränk und kehr zu einer voll funktionsfähigen Cocktailmaschine zurück."
@@ -32,7 +32,7 @@
     },
     "customCocktails": {
       "title": "Passe deine Cocktails an",
-      "description": "Du kannst alle Cocktail Daten über die App verwalten, ändern, hinzufügen oder löschen. Dies umfasst Zutaten und Rezepte, manuell hinzuzufügende Dinge und die Pumpanordnung."
+      "description": "Du kannst alle Cocktaildaten in der App verwalten: hinzufügen, ändern oder löschen. Das umfasst Zutaten und Rezepte, manuelle Zutaten und die Pumpenbelegung."
     },
     "multiLanguage": {
       "title": "Mehrsprachige Unterstützung",
@@ -45,19 +45,27 @@
     "batteriesIncluded": {
       "title": "Alles inklusive",
       "description": "Viele zusätzliche nützliche Dinge: Benutzerdefinierte App-Themes, Reinigungsprogramm, Datenvisualisierung und -export, LED + NFC-Unterstützung, Option zum Senden von Daten an Webhooks uvm."
+    },
+    "payment": {
+      "title": "Unterstützt Zahlungssysteme",
+      "description": "Verwende die SumUp-Integration oder den selbst gehosteten Dienst mit NFC-Chips, um deinen Kunden die Bezahlung ihrer Getränke zu ermöglichen. Du kannst die NFC-Chips auch auf alkoholfreie Getränke beschränken."
+    },
+    "servicePersonnel": {
+      "title": "Servicepersonal-Modus",
+      "description": "Mit dem Servicepersonal-Modus kannst du deine Maschine in einer Bar- oder Restaurantumgebung einfach verwalten. Das umfasst Funktionen wie Zugriffskontrolle und Nachverfolgbarkeit."
     }
   },
   "testimonials": {
     "title": "Was unsere Nutzer sagen",
-    "subtitle": "CocktailBerry bereitet besonders Menschen Freude, die einfach nur bauen, aber nicht programmieren möchten. Falls du programmieren möchtest, bieten Add-Ons auch eine einfache Möglichkeit, die Funktionalität zu erweitern.",
+    "subtitle": "Vor allem Leute, die bauen statt programmieren wollen, haben mit CocktailBerry Freude. Wer doch programmieren möchte, erweitert die Software einfach per Add-On.",
     "thomas": {
       "name": "Thomas",
-      "designation": "Ersteller einer Maschine",
+      "designation": "Entwickler einer Maschine",
       "content": "Ein paar Eingaben und der Code lief! Ich war total begeistert, besonders vom Umfang der Software und der sauberen, gut gestalteten Benutzeroberfläche."
     },
     "adnan": {
       "name": "Adnan",
-      "designation": "Ersteller mehrerer Maschinen",
+      "designation": "Entwickler mehrerer Maschinen",
       "content": "Ich habe ein paar Cocktail-Softwareprogramme ausprobiert, und ich muss sagen, eures ist dasjenige, das am besten strukturiert ist."
     },
     "marvin": {
@@ -67,7 +75,7 @@
     }
   },
   "footer": {
-    "description": "Beginne die Reise zum Bau deiner eigenen, persönlichen Cocktailmaschine.",
+    "description": "Starte den Bau deiner eigenen Cocktailmaschine.",
     "usefulLinks": "Nützliche Links",
     "documentation": "Dokumentation",
     "githubSource": "GitHub Code",
@@ -77,7 +85,7 @@
     "supportHelp": "Support & Hilfe",
     "faq": "FAQ",
     "openGithubIssue": "GitHub Issue öffnen",
-    "askDiscussions": "Frage Stellen"
+    "askDiscussions": "Frage stellen"
   },
   "breadcrumb": {
     "home": "Startseite"
@@ -103,7 +111,7 @@
       },
       "prepare": {
         "title": "Bereite deine Hardware vor",
-        "description": "Installiere das Betriebssystem auf der SD-Karte, steck die Karte in das Gerät, schließe die Stromversorgung an und schalte es ein.",
+        "description": "Installiere das Betriebssystem auf der SD-Karte, stecke die Karte ins Gerät, schließe die Stromversorgung an und schalte es ein.",
         "resource": "Raspberry Pi OS Installation"
       },
       "terminal": {
@@ -114,24 +122,24 @@
     },
     "steps": {
       "title": "Installationsschritte",
-      "subtitle": "Sobald du mit den Voraussetzung durch bist, installieren wir CocktailBerry auf deinem Gerät! Öffne dein Terminal, kopiere den folgenden Befehl und füge ihn ein. Jetzt ist es Zeit, dich zurückzulehnen und zu entspannen.",
-      "afterInstall": "Dieser Code überprüft alle Anforderungen, lädt die Software sowie benötigte Pakete herunter und erstellt die Autostart-Einstellungen. Danach ist die Maschine bereits einsatzbereit. Wenn du das System startest, wird das Programm automatisch ausgeführt. Weitere Informationen zur allgemeinen Installation findest du",
+      "subtitle": "Sobald du mit den Voraussetzungen durch bist, installieren wir CocktailBerry auf deinem Gerät! Öffne dein Terminal, kopiere den folgenden Befehl und füge ihn ein. Jetzt heißt es: zurücklehnen und entspannen.",
+      "afterInstall": "Dieser Code überprüft alle Anforderungen, lädt die Software sowie benötigte Pakete herunter und erstellt die Autostart-Einstellungen. Danach ist die Maschine einsatzbereit. Wenn du das System startest, wird das Programm automatisch ausgeführt. Weitere Informationen zur allgemeinen Installation findest du",
       "inDocs": "in der Dokumentation",
       "startProgram": "Wenn du möchtest, kannst du das Programm direkt starten mit:",
       "setupInstructions": "Die CocktailBerry-Benutzeroberfläche wird gestartet und du kannst alles einrichten. Um zu den Einstellungen zu gelangen, geh zu Flaschen und klicke auf das Zahnrad-Symbol. Für einen vollständigen Einblick in die Einrichtungsoptionen kannst du die",
       "officialDocs": "offizielle Dokumentation",
-      "forThat": "dafür überprüfen.",
-      "allSetUp": "Prima, du bist fertig! Viel Spaß mit deiner CocktailBerry-Erfahrung."
+      "forThat": "dafür ansehen.",
+      "allSetUp": "Super, alles erledigt! Viel Spaß mit CocktailBerry."
     }
   },
   "impressions": {
     "ui": {
       "title": "CocktailBerry Benutzeroberfläche",
-      "subtitle": "Es gibt mehrere Hauptseiten, mit denen du interagieren kannst. Deine Benutzer werden vor allem in den zwei Maker-Ansichten unterwegs sein. Beachte, dass die Bilder derzeit nur v1 und nicht v2 sind."
+      "subtitle": "Es gibt mehrere Hauptseiten, mit denen du interagieren kannst. Deine Benutzer werden vor allem in den zwei Maker-Ansichten unterwegs sein. Beachte, dass die Bilder aktuell noch v1 zeigen, nicht v2."
     },
     "machines": {
       "title": "Maschinenbeispiele",
-      "subtitle": "Hier ist ein kurzer Überblick über einige gebaute und veröffentlichte Maschinen. Vielleicht inspirieren sie dich für deine Maschine."
+      "subtitle": "Hier ein kurzer Überblick über einige Maschinen, die andere bereits gebaut und vorgestellt haben. Vielleicht findest du Inspiration für dein eigenes Projekt."
     }
   },
   "Meta": {

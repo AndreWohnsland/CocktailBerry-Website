@@ -30,14 +30,17 @@ export default function ScrollToTop() {
   }, []);
 
   return (
-    <div className="fixed bottom-8 right-8 z-[99]">
+    <div className="fixed right-8 bottom-8 z-[99]">
       {isVisible && (
+        // biome-ignore lint/a11y/useKeyWithClickEvents: keep
+        // biome-ignore lint/a11y/noStaticElementInteractions: keep
+        // biome-ignore lint/a11y/useAriaPropsSupportedByRole: keep
         <div
           onClick={scrollToTop}
           aria-label="scroll to top"
           className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
         >
-          <span className="mt-[6px] h-3 w-3 rotate-45 border-l border-t border-white"></span>
+          <span className="mt-[6px] h-3 w-3 rotate-45 border-white border-t border-l"></span>
         </div>
       )}
     </div>

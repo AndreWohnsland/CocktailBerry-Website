@@ -27,7 +27,7 @@
 
 @layer base {
   body {
-    font-family: "Amaranth", "sans-serif";
+    font-family: "Amaranth", sans-serif;
   }
 }
 

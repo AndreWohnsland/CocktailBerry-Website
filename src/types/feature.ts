@@ -1,11 +1,11 @@
-import { JSX } from "react";
+import type { JSX } from "react";
 
 export type Feature = {
   id: number;
   icon: JSX.Element;
   title: string;
   paragraph: string;
-  ressources?: resource[];
+  resources?: Resource[];
 };
 
-type resource = { name: string; url: string };
+type Resource = { name: string; url: string };

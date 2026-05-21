@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { getPathname, routing } from "@/i18n/routing";
 
 const SITE_URL = "https://cocktailberry.org";
