@@ -50,7 +50,7 @@
       "title": "Supports Payment Systems",
       "description": "Use the SumUp integration or a self hosted service with NFC Chips to let your customers pay for their drinks. You can also restrict the NFC chips to non-alcoholic beverages."
     },
-    "servicePersonell": {
+    "servicePersonnel": {
       "title": "Service Personnel Mode",
       "description": "With the service personnel mode, you can easily manage your machine in a bar or restaurant setting. This includes features access control and observability."
     }

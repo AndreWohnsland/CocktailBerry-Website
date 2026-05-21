@@ -50,7 +50,7 @@
       "title": "Unterstützt Zahlungssysteme",
       "description": "Verwende die SumUp-Integration oder den selbst gehosteten Dienst mit NFC-Chips, um deinen Kunden die Bezahlung ihrer Getränke zu ermöglichen. Du kannst die NFC-Chips auch auf alkoholfreie Getränke beschränken."
     },
-    "servicePersonell": {
+    "servicePersonnel": {
       "title": "Servicepersonal-Modus",
       "description": "Mit dem Servicepersonal-Modus kannst du deine Maschine in einer Bar- oder Restaurantumgebung einfach verwalten. Das umfasst Funktionen wie Zugriffskontrolle und Nachverfolgbarkeit."
     }
