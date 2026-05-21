@@ -4,6 +4,8 @@ import SpeedIcon from "@mui/icons-material/Speed";
 import LiquorOutlinedIcon from "@mui/icons-material/LiquorOutlined";
 import BatteryChargingFullOutlinedIcon from "@mui/icons-material/BatteryChargingFullOutlined";
 import TranslateOutlinedIcon from "@mui/icons-material/TranslateOutlined";
+import PaymentIcon from "@mui/icons-material/Payment";
+import PersonIcon from "@mui/icons-material/Person";
 import TerminalOutlinedIcon from "@mui/icons-material/TerminalOutlined";
 
 const featuresData = (t: any): Feature[] => [
@@ -33,12 +35,24 @@ const featuresData = (t: any): Feature[] => [
   },
   {
     id: 5,
+    icon: <PaymentIcon style={{ fontSize: 60 }} />,
+    title: t("payment.title"),
+    paragraph: t("payment.description"),
+  },
+  {
+    id: 6,
+    icon: <PersonIcon style={{ fontSize: 60 }} />,
+    title: t("servicePersonell.title"),
+    paragraph: t("servicePersonell.description"),
+  },
+  {
+    id: 7,
     icon: <TerminalOutlinedIcon style={{ fontSize: 60 }} />,
     title: t("addOns.title"),
     paragraph: t("addOns.description"),
   },
   {
-    id: 6,
+    id: 8,
     icon: <BatteryChargingFullOutlinedIcon style={{ fontSize: 60 }} />,
     title: t("batteriesIncluded.title"),
     paragraph: t("batteriesIncluded.description"),

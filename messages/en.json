@@ -45,6 +45,14 @@
     "batteriesIncluded": {
       "title": "Batteries Included",
       "description": "Many additional nice things to have: Custom app themes, cleaning program, data visualization and export, LED + NFC support, option to send data to webhooks and more."
+    },
+    "payment": {
+      "title": "Supports Payment Systems",
+      "description": "Use the SumUp integration or a self hosted service with NFC Chips to let your customers pay for their drinks. You can also restrict the NFC chips to non-alcoholic beverages."
+    },
+    "servicePersonell": {
+      "title": "Service Personnel Mode",
+      "description": "With the service personnel mode, you can easily manage your machine in a bar or restaurant setting. This includes features access control and observability."
     }
   },
   "testimonials": {
