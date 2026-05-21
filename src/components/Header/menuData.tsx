@@ -1,6 +1,9 @@
-import { Menu } from "@/types/menu";
+import type { useTranslations } from "next-intl";
+import type { Menu } from "@/types/menu";
 
-const menuData = (t: any): Menu[] => [
+type Translator = ReturnType<typeof useTranslations>;
+
+const menuData = (t: Translator): Menu[] => [
   {
     id: 1,
     title: t("menu.home"),

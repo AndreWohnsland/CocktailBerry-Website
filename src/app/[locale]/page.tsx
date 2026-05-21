@@ -1,10 +1,10 @@
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import StructuredData from "@/components/StructuredData";
 import Testimonials from "@/components/Testimonials";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Metadata } from "next";
 import { createLocalizedMetadata } from "@/lib/metadata";
 
 type PageParams = {

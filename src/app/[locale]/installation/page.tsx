@@ -1,7 +1,7 @@
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Installation from "@/components/Installation";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Metadata } from "next";
 import { createLocalizedMetadata } from "@/lib/metadata";
 
 type PageParams = {

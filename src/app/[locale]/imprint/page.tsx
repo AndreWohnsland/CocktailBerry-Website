@@ -1,6 +1,6 @@
-import Imprint from "@/components/Imprint";
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Metadata } from "next";
+import Imprint from "@/components/Imprint";
 import { createLocalizedMetadata } from "@/lib/metadata";
 
 type PageParams = {
@@ -25,11 +25,7 @@ const ImprintPage = async ({ params }: PageParams) => {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return (
-    <>
-      <Imprint />
-    </>
-  );
+  return <Imprint />;
 };
 
 export default ImprintPage;
