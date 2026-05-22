@@ -5,6 +5,7 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  serverExternalPackages: ["sharp"],
   images: {
     remotePatterns: [
       {
@@ -24,16 +25,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // add sharp to externals
-  webpack: (config) => ({
-    ...config,
-    externals: [
-      ...config.externals,
-      {
-        sharp: "commonjs sharp",
-      },
-    ],
-  }),
 };
 
 module.exports = withNextIntl(nextConfig);

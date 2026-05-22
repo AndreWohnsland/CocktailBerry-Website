@@ -39,7 +39,7 @@
       "description": "Die App ist in mehreren Sprachen verfügbar. Du kannst in den Einstellungen einfach zwischen ihnen wechseln. Wenn du möchtest, kannst du sogar Übersetzungen für deine Sprache bereitstellen."
     },
     "addOns": {
-      "title": "Unterstützt Add-Ons",
+      "title": "Eigene Add-Ons",
       "description": "Vermisst du eine bestimmte Funktion? Füge sie einfach hinzu! Die Software ist so konzipiert, dass sie leicht erweiterbar ist. Du kannst deine eigenen Funktionen hinzufügen und diese sogar mit der Community teilen."
     },
     "batteriesIncluded": {
@@ -162,5 +162,9 @@
   },
   "singleFeature": {
     "resources": "Ressourcen:"
+  },
+  "snippet": {
+    "copy": "In Zwischenablage kopieren",
+    "copied": "Kopiert!"
   }
 }

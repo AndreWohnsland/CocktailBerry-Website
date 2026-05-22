@@ -39,7 +39,7 @@
       "description": "The app is available in multiple languages. You can easily switch between them in the settings. If you want to, you can even provide translation for your language."
     },
     "addOns": {
-      "title": "Supports Add-Ons",
+      "title": "Custom Add-Ons",
       "description": "Missing some custom feature? Just add it! The software is designed to be easily extendable. You can add your own features and even share them with the community."
     },
     "batteriesIncluded": {
@@ -162,5 +162,9 @@
   },
   "singleFeature": {
     "resources": "Resources:"
+  },
+  "snippet": {
+    "copy": "Copy to clipboard",
+    "copied": "Copied!"
   }
 }

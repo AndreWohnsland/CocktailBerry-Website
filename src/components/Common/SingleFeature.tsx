@@ -8,7 +8,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
     <div className="w-full text-center">
       <div className="wow fadeInUp" data-wow-delay=".15s">
         <div className="flex content-center justify-center">
-          <div className="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+          <div className="mb-6 flex h-17.5 w-17.5 items-center justify-center rounded-md bg-primary/10 text-primary">
             {icon}
           </div>
         </div>
