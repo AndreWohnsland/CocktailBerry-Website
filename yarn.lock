@@ -982,6 +982,11 @@
   dependencies:
     csstype "^3.2.2"
 
+"@wrksz/themes@^0.9.3":
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@wrksz/themes/-/themes-0.9.3.tgz#2d2eaf7a6d8cfb15e9b9070321dc62a3c2de2a35"
+  integrity sha512-PRUeM4syP7vSnSnZwacHEK/vLGEBHfvxwoituc7J144ZnQytFIg5z26TknXWWLhYb0adhtsRlQEV+e6RIZ3AaQ==
+
 babel-plugin-macros@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-3.1.0.tgz#9ef6dc74deb934b4db344dc973ee851d148c50c1"
@@ -1304,11 +1309,6 @@ next-intl@^4.12.0:
     next-intl-swc-plugin-extractor "^4.12.0"
     po-parser "^2.1.1"
     use-intl "^4.12.0"
-
-next-themes@^0.4.6:
-  version "0.4.6"
-  resolved "https://registry.npmjs.org/next-themes/-/next-themes-0.4.6.tgz"
-  integrity sha512-pZvgD5L0IEvX5/9GWyHMf3m8BKiVQwsCMHfoFosXtXBMnaS0ZnIJ9ST4b4NqLVKDEm8QBxoNNGNaBv2JNF6XNA==
 
 next@16.2.6:
   version "16.2.6"
