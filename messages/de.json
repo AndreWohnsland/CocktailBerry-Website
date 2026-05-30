@@ -3,6 +3,7 @@
     "menu": {
       "home": "Startseite",
       "impressions": "Eindrücke",
+      "hardware": "Hardware",
       "installation": "Installation",
       "resources": "Ressourcen",
       "documentation": "Dokumentation",
@@ -98,6 +99,10 @@
     "impressions": {
       "title": "Eindrücke",
       "description": "Hier findest du eine Übersicht über die Programmoberfläche sowie einige Maschinen im Leerlauf oder in Aktion."
+    },
+    "hardware": {
+      "title": "Hardware",
+      "description": "Eine Übersicht über die Hardware, mit der du deine eigene CocktailBerry Cocktailmaschine bauen kannst. Kombiniere die Teile, die zu deinem Aufbau passen."
     }
   },
   "installation": {
@@ -163,6 +168,10 @@
       "title": "DIY Cocktailmaker Galerie",
       "description": "CocktailBerry Cocktailmaker und Cocktailmaschinen in Aktion. Sieh dir maßgeschneiderte Raspberry Pi Cocktailmaker und DIY-Getränkespender aus unserer Community an."
     },
+    "hardware": {
+      "title": "Hardware-Übersicht – Cocktailmaschine selber bauen",
+      "description": "Hardware-Übersicht zum Bau deiner eigenen CocktailBerry Cocktailmaschine: Raspberry Pi, unterstützte Pumpen, Relais-Board, Stromversorgung, Schläuche und mehr. Die Teile, die du brauchst, um eine Cocktailmaschine selber zu bauen."
+    },
     "installation": {
       "title": "Installationsanleitung",
       "description": "Schritt-für-Schritt-Installationsanleitung für die CocktailBerry Cocktailmaschinen-Software. Einfache Einrichtung auf dem Raspberry Pi für deinen DIY-Cocktailmacher. Kein Programmierwissen erforderlich."
@@ -184,6 +193,73 @@
     "step2Text": "Installiere CocktailBerry mit einem einzigen Befehl auf deinem Raspberry Pi.",
     "step3Name": "System konfigurieren",
     "step3Text": "Richte deine Cocktailmaschine über die CocktailBerry-Benutzeroberfläche ein."
+  },
+  "hardware": {
+    "intro": {
+      "title": "Cocktailmaschine selber bauen",
+      "subtitle": "CocktailBerry läuft auf günstigen, frei erhältlichen Bauteilen. Hier findest du eine Übersicht über die Hardware, mit der du deine eigene automatische Cocktailmaschine bauen kannst. Du kombinierst frei – es gibt kein fest vorgeschriebenes Setup."
+    },
+    "docsCallout": "Diese Seite ist eine schnelle Übersicht für den Einstieg. Die vollständige, aktuelle Teileliste mit allen Optionen und Verkabelungsdetails findest du in der",
+    "docsLink": "kompletten Hardware-Liste in der Dokumentation",
+    "components": {
+      "title": "Wichtigste Komponenten",
+      "subtitle": "Die grundlegenden Bausteine. Wähle die Teile, die zu deinem Aufbau und Budget passen.",
+      "pi": {
+        "title": "Raspberry Pi",
+        "description": "Das Herzstück deiner Maschine. Ein Raspberry Pi 3B+, 4 oder 5 führt die CocktailBerry-Software aus. Alle funktionieren – neuere Modelle sind einfach schneller."
+      },
+      "display": {
+        "title": "Touchscreen",
+        "description": "Deine Gäste bestellen ihre Drinks über ein Touch-Display. Ein 5\"- oder 7\"-Bildschirm ist üblich; der offizielle Raspberry-Pi-Touchscreen funktioniert ebenfalls."
+      },
+      "sdCard": {
+        "title": "SD-Karte",
+        "description": "Eine micro SD-Karte mit 16–32 GB enthält das Betriebssystem des Raspberry Pi und CocktailBerry."
+      },
+      "controller": {
+        "title": "Controller-Board",
+        "description": "Schaltet deine Pumpen über die GPIO-Pins des Raspberry Pi ein und aus. Nutze ein Relais-Board für einfaches Ein-/Ausschalten oder ein Motor-Shield für feinere Steuerung."
+      },
+      "power": {
+        "title": "Netzteil",
+        "description": "Du brauchst zwei getrennte Stromkreise: ein 5V-Netzteil für den Pi und ein stärkeres Netzteil für die Pumpen – der Pi allein kann sie nicht versorgen."
+      },
+      "tubing": {
+        "title": "Lebensmittelechte Schläuche",
+        "description": "Lebensmittelechte Schläuche transportieren deine Zutaten von den Flaschen ins Glas. Plane je nach Pumpenanzahl etwa 5–10 m ein."
+      },
+      "wiring": {
+        "title": "Verkabelung & Kabel",
+        "description": "Female-to-Female-Jumperkabel verbinden das Relais-Board mit dem Pi, dazu die üblichen HDMI- und USB-Kabel."
+      },
+      "payment": {
+        "title": "Bezahlung (optional)",
+        "description": "Mit einem USB-RFID-Leser und NFC-Tags können deine Gäste ihre Drinks bezahlen – praktisch für Bars, Events oder Charity-Aufbauten."
+      }
+    },
+    "pumps": {
+      "title": "Unterstützte Pumpen",
+      "subtitle": "Pumpen sind das Herzstück der Maschine. CocktailBerry steuert jede gängige DC- oder Schrittmotor-Pumpe bzw. jeden solchen Motor – die folgenden Typen sind also nur beliebte Beispiele, nicht die einzigen Optionen. Jede Pumpe wird über das Controller-Board verkabelt und von der Software gesteuert.",
+      "note": "Welchen Typ du auch wählst: Achte darauf, dass die Pumpen lebensmittelecht sind und über einen separaten Stromkreis versorgt werden – nicht über den Raspberry Pi.",
+      "membrane": {
+        "title": "Membranpumpen",
+        "description": "Selbstansaugende Membranpumpen befördern Flüssigkeit schnell und lassen sich gut oberhalb der Flaschen montieren. Eine beliebte, günstige Wahl."
+      },
+      "peristaltic": {
+        "title": "Peristaltikpumpen",
+        "description": "Nur der Silikonschlauch berührt deine Zutaten, das hält alles sauber und wartungsarm. Langsam, aber präzise, ideal für genaue Mengen."
+      }
+    },
+    "extensions": {
+      "title": "Einfach erweiterbar",
+      "description": "Fehlt dir eine Funktion oder spezielle Hardware? CocktailBerry ist auf Erweiterbarkeit ausgelegt. Mit dem Add-On-System kannst du nahezu alles programmieren – eigene LEDs, Sensoren, Benachrichtigungen oder deine eigene Logik – und es sogar mit der Community teilen."
+    },
+    "cta": {
+      "title": "Bereit zum Bauen?",
+      "subtitle": "Alle Teile beisammen? Dann geht's zur Installationsanleitung und CocktailBerry läuft in wenigen Minuten.",
+      "install": "🔧 Installationsanleitung",
+      "docs": "📖 Komplette Hardware-Liste"
+    }
   },
   "singleFeature": {
     "resources": "Ressourcen:"

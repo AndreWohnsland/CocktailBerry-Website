@@ -3,7 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import { Link, usePathname } from "@/i18n/routing";
+import { type AppPathname, Link, usePathname } from "@/i18n/routing";
 import LanguageSwitcher from "./LanguageSwitcher";
 import menuData from "./menuData";
 import ThemeToggler from "./ThemeToggler";
@@ -172,24 +172,37 @@ const Header = () => {
                               openIndex === index ? "block" : "hidden"
                             }`}
                           >
-                            {menuItem.submenu?.map((submenuItem) => (
-                              <a
-                                href={submenuItem.path}
-                                key={submenuItem.path}
-                                onClick={() => setNavbarOpen(false)}
-                                className="block rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
-                                target={
-                                  submenuItem.newTab ? "_blank" : undefined
-                                }
-                                rel={
-                                  submenuItem.newTab
-                                    ? "noopener noreferrer"
-                                    : undefined
-                                }
-                              >
-                                {submenuItem.title}
-                              </a>
-                            ))}
+                            {menuItem.submenu?.map((submenuItem) =>
+                              submenuItem.internal ? (
+                                <Link
+                                  href={{
+                                    pathname: submenuItem.path as AppPathname,
+                                  }}
+                                  key={submenuItem.path}
+                                  onClick={() => setNavbarOpen(false)}
+                                  className="block rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
+                                >
+                                  {submenuItem.title}
+                                </Link>
+                              ) : (
+                                <a
+                                  href={submenuItem.path}
+                                  key={submenuItem.path}
+                                  onClick={() => setNavbarOpen(false)}
+                                  className="block rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
+                                  target={
+                                    submenuItem.newTab ? "_blank" : undefined
+                                  }
+                                  rel={
+                                    submenuItem.newTab
+                                      ? "noopener noreferrer"
+                                      : undefined
+                                  }
+                                >
+                                  {submenuItem.title}
+                                </a>
+                              ),
+                            )}
                           </div>
                         </>
                       )}

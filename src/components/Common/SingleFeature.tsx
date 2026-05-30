@@ -28,7 +28,11 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
                 <a
                   href={resource.url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel={
+                    resource.sponsored
+                      ? "sponsored nofollow noopener noreferrer"
+                      : "noopener noreferrer"
+                  }
                   className="text-primary underline"
                 >
                   {resource.name}

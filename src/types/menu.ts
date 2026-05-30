@@ -14,4 +14,7 @@ export type Menu = MenuLink & {
 
 export type ExternalMenuLink = MenuLink & {
   path: string;
+  // When true, `path` is an internal app route rendered via the localized
+  // Link; otherwise it is treated as an external href.
+  internal?: boolean;
 };
