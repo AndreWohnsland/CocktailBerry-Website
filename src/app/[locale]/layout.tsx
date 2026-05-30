@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://cocktailberry.org"),
   title: {
     default:
-      "CocktailBerry - Open Source Cocktail Machine Software and Raspberry Pi Cocktail Maker",
+      "CocktailBerry - Open Source Raspberry Pi Cocktail Maker & Machine Software",
     template: "%s | CocktailBerry",
   },
   description:
-    "CocktailBerry: Open source Raspberry Pi cocktail machine software. Build your own DIY cocktail maker and automated bartender.",
+    "CocktailBerry: Free open-source Raspberry Pi cocktail maker software. Build your own DIY cocktail maker or automated cocktail machine.",
   authors: { name: "Andre Wohnsland" },
   creator: "CocktailBerry Team",
   publisher: "CocktailBerry",

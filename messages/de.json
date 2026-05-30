@@ -138,8 +138,8 @@
       "subtitle": "Es gibt mehrere Hauptseiten, mit denen du interagieren kannst. Deine Benutzer werden vor allem in den zwei Maker-Ansichten unterwegs sein. Beachte, dass die Bilder aktuell noch v1 zeigen, nicht v2."
     },
     "machines": {
-      "title": "Maschinenbeispiele",
-      "subtitle": "Hier ein kurzer Überblick über einige Maschinen, die andere bereits gebaut und vorgestellt haben. Vielleicht findest du Inspiration für dein eigenes Projekt."
+      "title": "Community Cocktailmaker Builds",
+      "subtitle": "Hier ist ein kurzer Überblick über einige selbstgebaute Cocktailmaker und Cocktailmaschinen der Community. Vielleicht findest du Inspiration für dein eigenes Projekt."
     }
   },
   "Meta": {
@@ -148,8 +148,8 @@
       "description": "Baue deine eigene automatisierte Cocktailmaschine mit der CocktailBerry Software! Nutze einen Raspberry Pi oder ein anderes SBC, um einen individuellen Cocktailmixer zu erstellen."
     },
     "impressions": {
-      "title": "Cocktailmaschinen-Galerie",
-      "description": "CocktailBerry Cocktailmaschinen in Aktion. Sieh dir maßgeschneiderte Raspberry Pi Cocktailmaker und DIY-Getränkespender aus unserer Community an."
+      "title": "DIY Cocktailmaker Galerie",
+      "description": "CocktailBerry Cocktailmaker und Cocktailmaschinen in Aktion. Sieh dir maßgeschneiderte Raspberry Pi Cocktailmaker und DIY-Getränkespender aus unserer Community an."
     },
     "installation": {
       "title": "Installationsanleitung",

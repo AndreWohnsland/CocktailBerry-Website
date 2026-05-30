@@ -40,9 +40,9 @@ const StructuredData = () => {
   const howToData = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "How to Build a Cocktail Machine with Raspberry Pi",
+    name: "How to Build a DIY Cocktail Maker with Raspberry Pi",
     description:
-      "Learn how to build your own automated cocktail maker using CocktailBerry software on Raspberry Pi",
+      "Learn how to build your own DIY cocktail maker using CocktailBerry software on Raspberry Pi",
     step: [
       {
         "@type": "HowToStep",
