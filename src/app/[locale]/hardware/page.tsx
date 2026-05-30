@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import Impressions from "@/components/Impressions";
+import Hardware from "@/components/Hardware";
 import BreadcrumbJsonLd from "@/components/StructuredData/BreadcrumbJsonLd";
 import { createLocalizedMetadata } from "@/lib/metadata";
 
@@ -16,27 +16,27 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "Meta" });
 
   return createLocalizedMetadata({
-    title: t("impressions.title"),
-    description: t("impressions.description"),
+    title: t("hardware.title"),
+    description: t("hardware.description"),
     locale,
-    pathname: "/impressions",
+    pathname: "/hardware",
   });
 }
 
-export default async function AboutPage({ params }: PageParams) {
+export default async function HardwarePage({ params }: PageParams) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "pages.impressions" });
+  const t = await getTranslations({ locale, namespace: "pages.hardware" });
 
   return (
     <>
       <BreadcrumbJsonLd
         locale={locale}
-        pathname="/impressions"
+        pathname="/hardware"
         pageName={t("title")}
       />
       <Breadcrumb pageName={t("title")} description={t("description")} />
-      <Impressions />
+      <Hardware />
     </>
   );
 }

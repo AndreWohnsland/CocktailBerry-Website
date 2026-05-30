@@ -17,6 +17,9 @@ export const routing = defineRouting({
     "/impressions": {
       de: "/eindruecke",
     },
+    "/hardware": {
+      de: "/cocktailmaschine-selber-bauen",
+    },
     "/installation": {
       de: "/installation",
     },

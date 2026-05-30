@@ -3,7 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import { Link, usePathname } from "@/i18n/routing";
+import { type AppPathname, Link, usePathname } from "@/i18n/routing";
 import LanguageSwitcher from "./LanguageSwitcher";
 import menuData from "./menuData";
 import ThemeToggler from "./ThemeToggler";
@@ -172,24 +172,37 @@ const Header = () => {
                               openIndex === index ? "block" : "hidden"
                             }`}
                           >
-                            {menuItem.submenu?.map((submenuItem) => (
-                              <a
-                                href={submenuItem.path}
-                                key={submenuItem.path}
-                                onClick={() => setNavbarOpen(false)}
-                                className="block rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
-                                target={
-                                  submenuItem.newTab ? "_blank" : undefined
-                                }
-                                rel={
-                                  submenuItem.newTab
-                                    ? "noopener noreferrer"
-                                    : undefined
-                                }
-                              >
-                                {submenuItem.title}
-                              </a>
-                            ))}
+                            {menuItem.submenu?.map((submenuItem) =>
+                              submenuItem.internal ? (
+                                <Link
+                                  href={{
+                                    pathname: submenuItem.path as AppPathname,
+                                  }}
+                                  key={submenuItem.path}
+                                  onClick={() => setNavbarOpen(false)}
+                                  className="block rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
+                                >
+                                  {submenuItem.title}
+                                </Link>
+                              ) : (
+                                <a
+                                  href={submenuItem.path}
+                                  key={submenuItem.path}
+                                  onClick={() => setNavbarOpen(false)}
+                                  className="block rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
+                                  target={
+                                    submenuItem.newTab ? "_blank" : undefined
+                                  }
+                                  rel={
+                                    submenuItem.newTab
+                                      ? "noopener noreferrer"
+                                      : undefined
+                                  }
+                                >
+                                  {submenuItem.title}
+                                </a>
+                              ),
+                            )}
                           </div>
                         </>
                       )}
@@ -201,7 +214,7 @@ const Header = () => {
             <div className="flex items-center justify-end gap-2 pr-16 lg:pr-0">
               <a
                 href="https://github.com/AndreWohnsland/CocktailBerry"
-                className="mr-1 hidden items-center whitespace-nowrap rounded-sm bg-primary px-4 py-3 font-medium text-base text-white shadow-btn transition duration-300 ease-in-up hover:bg-primary/90 hover:shadow-btn-hover md:inline-flex"
+                className="mr-1 hidden items-center whitespace-nowrap rounded-sm bg-brand px-4 py-3 font-medium text-base text-white shadow-btn transition duration-300 ease-in-up hover:bg-brand/90 hover:shadow-btn-hover md:inline-flex"
               >
                 <GitHubIcon />
                 <span className="hidden pl-2 xl:inline">Source Code</span>

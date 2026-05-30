@@ -8,4 +8,4 @@ export type Feature = {
   resources?: Resource[];
 };
 
-type Resource = { name: string; url: string };
+type Resource = { name: string; url: string; sponsored?: boolean };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Installation from "@/components/Installation";
+import BreadcrumbJsonLd from "@/components/StructuredData/BreadcrumbJsonLd";
 import { createLocalizedMetadata } from "@/lib/metadata";
 
 type PageParams = {
@@ -29,6 +30,11 @@ export default async function InstallationPage({ params }: PageParams) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        locale={locale}
+        pathname="/installation"
+        pageName={t("title")}
+      />
       <Breadcrumb pageName={t("title")} description={t("description")} />
       <Installation />
     </>

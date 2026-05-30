@@ -28,6 +28,13 @@ const menuData = (t: Translator): Menu[] => [
     newTab: false,
     submenu: [
       {
+        id: 40,
+        title: t("menu.hardware"),
+        path: "/hardware",
+        internal: true,
+        newTab: false,
+      },
+      {
         id: 41,
         title: t("menu.documentation"),
         path: "https://cocktailberry.readthedocs.io/",
