@@ -23,7 +23,7 @@ const Hero = () => {
               <div className="mb-12 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                 <Link
                   href={{ pathname: "/installation", hash: "prerequisite" }}
-                  className="rounded-sm bg-primary px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-primary/80"
+                  className="rounded-sm bg-brand px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-brand/80"
                 >
                   {t("getStarted")}
                 </Link>
@@ -45,7 +45,7 @@ const Hero = () => {
                 </a>
                 <a
                   href="https://demo.cocktailberry.org"
-                  className="rounded-sm bg-primary px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-primary/80"
+                  className="rounded-sm bg-brand px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-brand/80"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

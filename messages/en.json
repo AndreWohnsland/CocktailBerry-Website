@@ -102,7 +102,7 @@
     },
     "hardware": {
       "title": "Hardware",
-      "description": "An overview of the hardware you can use to build your own CocktailBerry cocktail machine. Mix and match the parts that fit your build."
+      "description": "An overview of the hardware you can use to build your own CocktailBerry cocktail maker. Mix and match the parts that fit your build."
     }
   },
   "installation": {
@@ -197,7 +197,7 @@
   "hardware": {
     "intro": {
       "title": "Build Your Own Cocktail Machine",
-      "subtitle": "CocktailBerry runs on affordable, off-the-shelf parts. Here is an overview of the hardware you can use to build your own automated cocktail machine. You mix and match — there is no single required setup."
+      "subtitle": "CocktailBerry runs on affordable, off-the-shelf parts. Here is an overview of the hardware you can use to build your own automated cocktail maker. You mix and match — there is no single required setup."
     },
     "docsCallout": "This page is a quick starting overview. For the complete, up-to-date parts list with every option and wiring details, see the",
     "docsLink": "full hardware list in the documentation",

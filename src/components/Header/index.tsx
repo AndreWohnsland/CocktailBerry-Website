@@ -214,7 +214,7 @@ const Header = () => {
             <div className="flex items-center justify-end gap-2 pr-16 lg:pr-0">
               <a
                 href="https://github.com/AndreWohnsland/CocktailBerry"
-                className="mr-1 hidden items-center whitespace-nowrap rounded-sm bg-primary px-4 py-3 font-medium text-base text-white shadow-btn transition duration-300 ease-in-up hover:bg-primary/90 hover:shadow-btn-hover md:inline-flex"
+                className="mr-1 hidden items-center whitespace-nowrap rounded-sm bg-brand px-4 py-3 font-medium text-base text-white shadow-btn transition duration-300 ease-in-up hover:bg-brand/90 hover:shadow-btn-hover md:inline-flex"
               >
                 <GitHubIcon />
                 <span className="hidden pl-2 xl:inline">Source Code</span>

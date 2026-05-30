@@ -148,7 +148,7 @@ const ErrorPage = () => {
               </p>
               <Link
                 href="/"
-                className="rounded-md bg-primary px-8 py-3 font-bold text-base text-white shadow-signUp duration-300 hover:bg-white hover:text-primary md:px-9 lg:px-8 xl:px-9"
+                className="rounded-md bg-brand px-8 py-3 font-bold text-base text-white shadow-signUp duration-300 hover:bg-white hover:text-brand md:px-9 lg:px-8 xl:px-9"
               >
                 Back to Homepage
               </Link>
