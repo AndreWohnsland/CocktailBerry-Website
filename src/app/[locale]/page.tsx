@@ -41,7 +41,7 @@ export default async function Home({ params }: PageParams) {
 
   return (
     <>
-      <StructuredData />
+      <StructuredData locale={locale} />
       <ScrollUp />
       <Hero />
       <Features />

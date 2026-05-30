@@ -6,26 +6,29 @@ import cbmk3 from "../../../public/images/machines/cbmk3.jpg";
 
 // all images are 1000x750px
 
+// `name` is interpolated into the localized `machineAlt` template at render
+// time (see Impressions/index.tsx); the names are community machine names and
+// stay untranslated.
 const machineImages = [
   {
     src: alcoholFactory,
-    alt: "Alcohol Factory",
+    name: "Alcohol Factory",
   },
   {
     src: bart,
-    alt: "Bart",
+    name: "Bart",
   },
   {
     src: cb2go,
-    alt: "CB2Go",
+    name: "CB2Go",
   },
   {
     src: cbmk2,
-    alt: "CBMK2",
+    name: "CBMK2",
   },
   {
     src: cbmk3,
-    alt: "CBMK3",
+    name: "CBMK3",
   },
 ].map((image) => ({ ...image, height: 1000, width: 750 }));
 

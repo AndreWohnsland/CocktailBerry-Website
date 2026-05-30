@@ -27,12 +27,12 @@ const Impressions = () => {
           <div className="mb-8 flex flex-row flex-wrap justify-center justify-items-center">
             {programImages.map((image) => (
               <div
-                key={image.alt}
+                key={image.viewKey}
                 className="basis-full p-1 lg:basis-1/2 2xl:basis-1/3"
               >
                 <Image
                   src={image.src}
-                  alt={image.alt}
+                  alt={t("interfaceAlt", { view: t(image.viewKey) })}
                   placeholder="blur"
                   className="rounded-md"
                 />
@@ -54,12 +54,12 @@ const Impressions = () => {
           <div className="mb-8 flex flex-row flex-wrap justify-center justify-items-center">
             {machineImages.map((image) => (
               <div
-                key={image.alt}
+                key={image.name}
                 className="basis-full p-1 lg:basis-1/2 2xl:basis-1/3"
               >
                 <Image
                   src={image.src}
-                  alt={image.alt}
+                  alt={t("machineAlt", { name: image.name })}
                   placeholder="blur"
                   className="rounded-lg"
                 />
