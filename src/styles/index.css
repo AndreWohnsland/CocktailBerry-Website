@@ -15,6 +15,9 @@
   --color-black: #121723;
   --color-dark: #1d2430;
   --color-primary: #3e4fad;
+  /* Brand blue for solid buttons. Stays constant (no dark-mode brightening) so
+     buttons keep the deeper blue while links/icons use the lighter --color-primary. */
+  --color-brand: #3e4fad;
   --color-secondary: #e92063;
   --color-yellow: #fbb040;
   --color-bg-color-dark: #171c28;
@@ -33,6 +36,12 @@
   --shadow-sticky-dark: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
   --shadow-btn: 0px 1px 2px rgba(4, 10, 34, 0.15);
   --shadow-btn-hover: 0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Brighter primary accent in dark mode: the default blue is a touch dark on
+   dark backgrounds, so links, icons and buttons read better with a lighter shade. */
+.dark {
+  --color-primary: #7b8cf5;
 }
 
 @utility container {
