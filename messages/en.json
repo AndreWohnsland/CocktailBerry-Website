@@ -3,6 +3,7 @@
     "menu": {
       "home": "Home",
       "impressions": "Impressions",
+      "hardware": "Hardware",
       "installation": "Installation",
       "resources": "Resources",
       "documentation": "Documentation",
@@ -98,6 +99,10 @@
     "impressions": {
       "title": "Impressions",
       "description": "Here you can find an overview of the program interface, as well as some machines idling or in action."
+    },
+    "hardware": {
+      "title": "Hardware",
+      "description": "An overview of the hardware you can use to build your own CocktailBerry cocktail machine. Mix and match the parts that fit your build."
     }
   },
   "installation": {
@@ -163,6 +168,10 @@
       "title": "DIY Cocktail Maker Gallery",
       "description": "CocktailBerry cocktail makers and machines in action. See custom-built Raspberry Pi cocktail makers and DIY drink dispensers created by our community."
     },
+    "hardware": {
+      "title": "Hardware Guide – Build a Cocktail Machine",
+      "description": "Hardware overview for building your own CocktailBerry cocktail machine: Raspberry Pi, supported pumps, relay board, power supply, tubing and more. The parts you need to build a DIY cocktail maker."
+    },
     "installation": {
       "title": "Installation Guide",
       "description": "Step-by-step installation guide for CocktailBerry cocktail machine software. Easy setup on Raspberry Pi for your DIY cocktail maker. No programming knowledge required."
@@ -184,6 +193,73 @@
     "step2Text": "Install CocktailBerry on your Raspberry Pi with a single command.",
     "step3Name": "Configure the system",
     "step3Text": "Set up your cocktail machine through the CocktailBerry interface."
+  },
+  "hardware": {
+    "intro": {
+      "title": "Build Your Own Cocktail Machine",
+      "subtitle": "CocktailBerry runs on affordable, off-the-shelf parts. Here is an overview of the hardware you can use to build your own automated cocktail machine. You mix and match — there is no single required setup."
+    },
+    "docsCallout": "This page is a quick starting overview. For the complete, up-to-date parts list with every option and wiring details, see the",
+    "docsLink": "full hardware list in the documentation",
+    "components": {
+      "title": "Core Components",
+      "subtitle": "The essential building blocks. Pick the parts that fit your build and budget.",
+      "pi": {
+        "title": "Raspberry Pi",
+        "description": "The brain of your machine. A Raspberry Pi 3B+, 4, or 5 runs the CocktailBerry software. Any of them works — newer models are simply faster."
+      },
+      "display": {
+        "title": "Touchscreen",
+        "description": "Your guests order drinks on a touch display. A 5\" or 7\" screen is the common choice; the official Raspberry Pi touchscreen works too."
+      },
+      "sdCard": {
+        "title": "SD Card",
+        "description": "A 16–32 GB micro SD card holds the Raspberry Pi operating system and CocktailBerry."
+      },
+      "controller": {
+        "title": "Controller Board",
+        "description": "Switches your pumps on and off via the Raspberry Pi's GPIO pins. Use a relay board for simple on/off control, or a motor shield for finer control."
+      },
+      "power": {
+        "title": "Power Supply",
+        "description": "You need two separate circuits: one 5V supply for the Pi and a stronger supply for the pumps — the Pi alone cannot power them."
+      },
+      "tubing": {
+        "title": "Food-Safe Tubing",
+        "description": "Food-safe hose carries your ingredients from the bottles to the glass. Plan for roughly 5–10 m depending on your number of pumps."
+      },
+      "wiring": {
+        "title": "Wiring & Cables",
+        "description": "Female-to-female jumper wires connect the relay board to the Pi, plus the usual HDMI and USB cables."
+      },
+      "payment": {
+        "title": "Payment (Optional)",
+        "description": "Add a USB RFID reader and NFC tags to let guests pay for their drinks — handy for bars, events, or charity setups."
+      }
+    },
+    "pumps": {
+      "title": "Supported Pumps",
+      "subtitle": "Pumps are the heart of the machine. CocktailBerry drives any standard DC- or stepper-based pump or motor, so the types below are just common examples — not the only options. Each pump is wired through the controller board and controlled by the software.",
+      "note": "Whichever type you choose, make sure the pumps are food-safe and powered from a separate circuit — not from the Raspberry Pi.",
+      "membrane": {
+        "title": "Membrane Pumps",
+        "description": "Self-priming diaphragm pumps that move liquid quickly and handle being mounted above the bottles well. A popular, affordable choice."
+      },
+      "peristaltic": {
+        "title": "Peristaltic Pumps",
+        "description": "Only the silicone tube touches your ingredients, which keeps things clean and easy to maintain. Gentle and precise, ideal for accurate pours."
+      }
+    },
+    "extensions": {
+      "title": "Easy to Extend",
+      "description": "Missing a feature or a special piece of hardware? CocktailBerry is built to be extended. With its add-on system you can program almost anything — custom LEDs, sensors, notifications, or your own logic — and even share it with the community."
+    },
+    "cta": {
+      "title": "Ready to start building?",
+      "subtitle": "Got your parts together? Head over to the installation guide and get CocktailBerry running in minutes.",
+      "install": "🔧 Installation Guide",
+      "docs": "📖 Full Hardware List"
+    }
   },
   "singleFeature": {
     "resources": "Resources:"

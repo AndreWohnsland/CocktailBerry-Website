@@ -15,6 +15,7 @@ const PAGES: {
   changeFrequency: ChangeFrequency;
 }[] = [
   { pathname: "/", priority: 1, changeFrequency: "monthly" },
+  { pathname: "/hardware", priority: 0.9, changeFrequency: "monthly" },
   { pathname: "/impressions", priority: 0.8, changeFrequency: "weekly" },
   { pathname: "/installation", priority: 0.8, changeFrequency: "monthly" },
   { pathname: "/imprint", priority: 0.5, changeFrequency: "yearly" },
