@@ -7,38 +7,40 @@ import optionPic from "../../../public/images/interface/option.png";
 import recipePic from "../../../public/images/interface/recipes.png";
 import selectionPic from "../../../public/images/interface/selection.png";
 
+// `viewKey` resolves to a localized view label that is interpolated into the
+// `interfaceAlt` template at render time (see Impressions/index.tsx).
 const programImages = [
   {
     src: mainPic,
-    alt: "Main view",
+    viewKey: "views.main",
   },
   {
     src: selectionPic,
-    alt: "Selection view",
+    viewKey: "views.selection",
   },
   {
     src: ingredientPic,
-    alt: "Ingredient view",
+    viewKey: "views.ingredient",
   },
   {
     src: recipePic,
-    alt: "Recipe view",
+    viewKey: "views.recipe",
   },
   {
     src: bottlesPic,
-    alt: "Bottle view",
+    viewKey: "views.bottle",
   },
   {
     src: optionPic,
-    alt: "Option view",
+    viewKey: "views.option",
   },
   {
     src: configPic,
-    alt: "Config view",
+    viewKey: "views.config",
   },
   {
     src: dataPic,
-    alt: "Data view",
+    viewKey: "views.data",
   },
 ].map((image) => ({ ...image, height: 600, width: 1024 }));
 

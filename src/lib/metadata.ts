@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { getPathname, routing } from "@/i18n/routing";
 
-const SITE_URL = "https://cocktailberry.org";
-type AppPathname = keyof typeof routing.pathnames;
+export const SITE_URL = "https://cocktailberry.org";
+export type AppPathname = keyof typeof routing.pathnames;
 const DEFAULT_PATHNAME: AppPathname = "/";
 
 interface LocalizedMetadataParams {
@@ -15,7 +15,10 @@ interface LocalizedMetadataParams {
   twitter?: Metadata["twitter"];
 }
 
-const buildLocalizedUrl = (locale: string, pathname: AppPathname): string => {
+export const buildLocalizedUrl = (
+  locale: string,
+  pathname: AppPathname,
+): string => {
   const localizedPath = getPathname({ href: pathname, locale });
   return `${SITE_URL}${localizedPath === "/" ? "" : localizedPath}`;
 };
@@ -32,11 +35,16 @@ export function createLocalizedMetadata({
   const normalizedPathname = pathname ?? DEFAULT_PATHNAME;
   const canonicalUrl = buildLocalizedUrl(locale, normalizedPathname);
 
-  const languages = Object.fromEntries(
+  const languages: Record<string, string> = Object.fromEntries(
     routing.locales.map((loc) => {
       const url = buildLocalizedUrl(loc, normalizedPathname);
       return [loc, url];
     }),
+  );
+  // Tell search engines which URL to serve when no language matches.
+  languages["x-default"] = buildLocalizedUrl(
+    routing.defaultLocale,
+    normalizedPathname,
   );
 
   return {

@@ -140,6 +140,18 @@
     "machines": {
       "title": "Community-Built Cocktail Makers",
       "subtitle": "Here's a brief overview of some custom-built cocktail makers and machines released by the community. You might find inspiration to build your own."
+    },
+    "machineAlt": "DIY cocktail machine \"{name}\" built with CocktailBerry software on a Raspberry Pi",
+    "interfaceAlt": "CocktailBerry cocktail machine software – {view} screen",
+    "views": {
+      "main": "main cocktail maker",
+      "selection": "cocktail selection",
+      "ingredient": "ingredient management",
+      "recipe": "recipe management",
+      "bottle": "bottle and pump setup",
+      "option": "options",
+      "config": "configuration",
+      "data": "data and statistics"
     }
   },
   "Meta": {
@@ -159,6 +171,19 @@
       "title": "Imprint",
       "description": "CocktailBerry: Imprint page"
     }
+  },
+  "structuredData": {
+    "appDescription": "Open-source software platform for building custom cocktail machines on Raspberry Pi and other single-board computers. Create automated bartending experiences with Python, Qt, and React.",
+    "orgDescription": "Open-source platform for building custom cocktail machines with a Raspberry Pi.",
+    "keywords": "cocktail machine, cocktail machine software, diy cocktail machine, raspberry pi cocktail machine, automated bartender, cocktail maker, drink dispenser, cocktail automation, open source",
+    "howToName": "How to Build a DIY Cocktail Maker with a Raspberry Pi",
+    "howToDescription": "Learn how to build your own DIY cocktail maker using CocktailBerry software on a Raspberry Pi.",
+    "step1Name": "Get the hardware",
+    "step1Text": "Obtain a Raspberry Pi or other single-board computer and the required components.",
+    "step2Name": "Install the software",
+    "step2Text": "Install CocktailBerry on your Raspberry Pi with a single command.",
+    "step3Name": "Configure the system",
+    "step3Text": "Set up your cocktail machine through the CocktailBerry interface."
   },
   "singleFeature": {
     "resources": "Resources:"

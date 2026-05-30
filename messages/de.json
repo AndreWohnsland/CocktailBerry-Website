@@ -140,6 +140,18 @@
     "machines": {
       "title": "Community Cocktailmaker Builds",
       "subtitle": "Hier ist ein kurzer Überblick über einige selbstgebaute Cocktailmaker und Cocktailmaschinen der Community. Vielleicht findest du Inspiration für dein eigenes Projekt."
+    },
+    "machineAlt": "Selbstgebaute Cocktailmaschine „{name}“ mit CocktailBerry-Software auf einem Raspberry Pi",
+    "interfaceAlt": "CocktailBerry Cocktailmaschinen-Software – {view}",
+    "views": {
+      "main": "Hauptansicht zum Cocktail mixen",
+      "selection": "Cocktailauswahl",
+      "ingredient": "Zutatenverwaltung",
+      "recipe": "Rezeptverwaltung",
+      "bottle": "Flaschen- und Pumpeneinrichtung",
+      "option": "Optionen",
+      "config": "Konfiguration",
+      "data": "Daten und Statistiken"
     }
   },
   "Meta": {
@@ -159,6 +171,19 @@
       "title": "Impressum",
       "description": "CocktailBerry: Impressum"
     }
+  },
+  "structuredData": {
+    "appDescription": "Open-Source-Softwareplattform zum Bau individueller Cocktailmaschinen auf dem Raspberry Pi und anderen Einplatinencomputern. Erstelle automatisierte Cocktail-Erlebnisse mit Python, Qt und React.",
+    "orgDescription": "Open-Source-Plattform zum Bau individueller Cocktailmaschinen mit einem Raspberry Pi.",
+    "keywords": "Cocktailmaschine, Cocktailmaschine selber bauen, Cocktailmaschine Software, DIY Cocktailmaschine, Raspberry Pi Cocktailmaschine, Cocktail Roboter, automatische Cocktailmaschine, Cocktailautomat, Open Source",
+    "howToName": "Cocktailmaschine mit einem Raspberry Pi selber bauen",
+    "howToDescription": "Lerne, wie du mit der CocktailBerry-Software deine eigene automatische Cocktailmaschine auf einem Raspberry Pi baust.",
+    "step1Name": "Hardware besorgen",
+    "step1Text": "Besorge dir einen Raspberry Pi oder einen anderen Einplatinencomputer sowie die benötigten Komponenten.",
+    "step2Name": "Software installieren",
+    "step2Text": "Installiere CocktailBerry mit einem einzigen Befehl auf deinem Raspberry Pi.",
+    "step3Name": "System konfigurieren",
+    "step3Text": "Richte deine Cocktailmaschine über die CocktailBerry-Benutzeroberfläche ein."
   },
   "singleFeature": {
     "resources": "Ressourcen:"
