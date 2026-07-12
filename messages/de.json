@@ -6,7 +6,8 @@
       "hardware": "Hardware",
       "installation": "Installation",
       "resources": "Ressourcen",
-      "documentation": "Dokumentation",
+      "softwareDocs": "Software-Doku",
+      "hardwareDocs": "Hardware-Doku",
       "githubSource": "GitHub Code",
       "cocktailStats": "CocktailBerry Stats",
       "demoApp": "Demo App"
@@ -15,10 +16,11 @@
   "hero": {
     "title": "Open-Source Software für deine Cocktailmaschine",
     "description": "CocktailBerry ist eine umfangreiche Open-Source-Plattform zum Bau individueller Cocktailmaschinen auf dem Raspberry Pi oder anderen SBCs. Mit Python, Qt und React bietet sie eine flexible und skalierbare Lösung für einzigartige, automatisierte Cocktail-Erlebnisse. Ob du eine einzelne Maschine baust oder mehrere einsetzt - CocktailBerry bietet konsistente Software für alle Installationen. Detaillierte Informationen, Installationsschritte und Einrichtungsanleitung findest du in der Dokumentation.",
-    "getStarted": "🔥 Loslegen",
-    "documentation": "📖 Dokumentation",
-    "starGithub": "🌟 Star Auf GitHub",
-    "v2Demo": "🍸 v2 Demo"
+    "getStarted": "Loslegen",
+    "software": "Software",
+    "hardware": "Hardware",
+    "starGithub": "Auf GitHub",
+    "v2Demo": "Demo"
   },
   "features": {
     "title": "Hauptfunktionen",
@@ -78,7 +80,8 @@
   "footer": {
     "description": "Starte den Bau deiner eigenen Cocktailmaschine.",
     "usefulLinks": "Nützliche Links",
-    "documentation": "Dokumentation",
+    "software": "Software",
+    "hardware": "Hardware",
     "githubSource": "GitHub Code",
     "cocktailStats": "Cocktail Statistiken",
     "terms": "Bedingungen",
@@ -201,6 +204,8 @@
     },
     "docsCallout": "Diese Seite ist eine schnelle Übersicht für den Einstieg. Die vollständige, aktuelle Teileliste mit allen Optionen und Verkabelungsdetails findest du in der",
     "docsLink": "kompletten Hardware-Liste in der Dokumentation",
+    "officialCallout": "Du möchtest ein fertiges Design? Die offiziellen Maschinen und Steuerplatinen, inklusive Bauanleitungen und Fertigungsdateien, findest du in der",
+    "officialLink": "Hardware-Dokumentation",
     "components": {
       "title": "Wichtigste Komponenten",
       "subtitle": "Die grundlegenden Bausteine. Wähle die Teile, die zu deinem Aufbau und Budget passen.",
@@ -257,8 +262,8 @@
     "cta": {
       "title": "Bereit zum Bauen?",
       "subtitle": "Alle Teile beisammen? Dann geht's zur Installationsanleitung und CocktailBerry läuft in wenigen Minuten.",
-      "install": "🔧 Installationsanleitung",
-      "docs": "📖 Komplette Hardware-Liste"
+      "install": "Installationsanleitung",
+      "docs": "Komplette Hardware-Liste"
     }
   },
   "singleFeature": {

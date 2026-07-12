@@ -38,6 +38,7 @@ const StructuredData = async ({ locale }: { locale: string }) => {
     sameAs: [
       "https://github.com/AndreWohnsland/CocktailBerry",
       "https://docs.cocktailberry.org",
+      "https://hardware.cocktailberry.org",
     ],
   };
 

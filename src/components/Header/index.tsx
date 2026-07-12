@@ -180,8 +180,9 @@ const Header = () => {
                                   }}
                                   key={submenuItem.path}
                                   onClick={() => setNavbarOpen(false)}
-                                  className="block rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
+                                  className="flex items-center gap-2 rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
                                 >
+                                  {submenuItem.icon}
                                   {submenuItem.title}
                                 </Link>
                               ) : (
@@ -189,7 +190,7 @@ const Header = () => {
                                   href={submenuItem.path}
                                   key={submenuItem.path}
                                   onClick={() => setNavbarOpen(false)}
-                                  className="block rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
+                                  className="flex items-center gap-2 rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
                                   target={
                                     submenuItem.newTab ? "_blank" : undefined
                                   }
@@ -199,6 +200,7 @@ const Header = () => {
                                       : undefined
                                   }
                                 >
+                                  {submenuItem.icon}
                                   {submenuItem.title}
                                 </a>
                               ),
