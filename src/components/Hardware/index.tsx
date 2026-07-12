@@ -1,5 +1,7 @@
 "use client";
+import BuildIcon from "@mui/icons-material/Build";
 import ExtensionIcon from "@mui/icons-material/Extension";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import SectionTitle from "../Common/SectionTitle";
@@ -9,6 +11,7 @@ import hardwareData from "./hardwareData";
 import pumpData from "./pumpData";
 
 const DOCS_HARDWARE_URL = "https://docs.cocktailberry.org/hardware/";
+const HARDWARE_DOCS_URL = "https://hardware.cocktailberry.org/";
 
 const Hardware = () => {
   const t = useTranslations("hardware");
@@ -34,6 +37,18 @@ const Hardware = () => {
                 className="text-primary underline"
               >
                 {t("docsLink")}
+              </a>
+              .
+            </p>
+            <p className="mt-3 text-base text-body-color leading-relaxed md:text-lg">
+              {t("officialCallout")}{" "}
+              <a
+                href={HARDWARE_DOCS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline"
+              >
+                {t("officialLink")}
               </a>
               .
             </p>
@@ -122,19 +137,21 @@ const Hardware = () => {
             <p className="!leading-relaxed mb-10 text-base text-body-color md:text-lg">
               {t("cta.subtitle")}
             </p>
-            <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href={{ pathname: "/installation", hash: "prerequisite" }}
-                className="rounded-sm bg-brand px-6 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-brand/80"
+                className="inline-flex items-center gap-2 rounded-sm bg-brand px-6 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-brand/80"
               >
+                <BuildIcon fontSize="small" />
                 {t("cta.install")}
               </Link>
               <a
                 href={DOCS_HARDWARE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-sm bg-secondary px-6 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-secondary/80"
+                className="inline-flex items-center gap-2 rounded-sm bg-secondary px-6 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-secondary/80"
               >
+                <MenuBookIcon fontSize="small" />
                 {t("cta.docs")}
               </a>
             </div>

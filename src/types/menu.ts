@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { AppPathname } from "@/i18n/routing";
 
 export type MenuLink = {
@@ -17,4 +18,5 @@ export type ExternalMenuLink = MenuLink & {
   // When true, `path` is an internal app route rendered via the localized
   // Link; otherwise it is treated as an external href.
   internal?: boolean;
+  icon?: ReactNode;
 };

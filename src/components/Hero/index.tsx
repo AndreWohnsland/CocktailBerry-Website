@@ -1,4 +1,9 @@
 "use client";
+import LocalBarIcon from "@mui/icons-material/LocalBar";
+import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
+import MemoryIcon from "@mui/icons-material/Memory";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import StarIcon from "@mui/icons-material/Star";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
@@ -20,35 +25,48 @@ const Hero = () => {
               <p className="!leading-relaxed mb-12 text-base text-body-color sm:text-lg md:text-xl dark:text-body-color-dark">
                 {t("description")}
               </p>
-              <div className="mb-12 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+              <div className="mb-12 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   href={{ pathname: "/installation", hash: "prerequisite" }}
-                  className="rounded-sm bg-brand px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-brand/80"
+                  className="inline-flex items-center gap-2 rounded-sm bg-brand px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-brand/80"
                 >
+                  <LocalFireDepartmentIcon fontSize="small" />
                   {t("getStarted")}
                 </Link>
                 <a
-                  href="https://cocktailberry.readthedocs.io/installation/"
-                  className="rounded-sm bg-secondary px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-secondary/80"
+                  href="https://docs.cocktailberry.org/"
+                  className="inline-flex items-center gap-2 rounded-sm bg-secondary px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-secondary/80"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {t("documentation")}
+                  <MenuBookIcon fontSize="small" />
+                  {t("software")}
+                </a>
+                <a
+                  href="https://hardware.cocktailberry.org/"
+                  className="inline-flex items-center gap-2 rounded-sm bg-secondary px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-secondary/80"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MemoryIcon fontSize="small" />
+                  {t("hardware")}
                 </a>
                 <a
                   href="https://github.com/AndreWohnsland/CocktailBerry"
-                  className="inline-block rounded-sm bg-black px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                  className="inline-flex items-center gap-2 rounded-sm bg-black px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <StarIcon fontSize="small" />
                   {t("starGithub")}
                 </a>
                 <a
                   href="https://demo.cocktailberry.org"
-                  className="rounded-sm bg-brand px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-brand/80"
+                  className="inline-flex items-center gap-2 rounded-sm bg-brand px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-brand/80"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <LocalBarIcon fontSize="small" />
                   {t("v2Demo")}
                 </a>
               </div>

@@ -45,7 +45,15 @@ const Footer = () => {
                     href="https://docs.cocktailberry.org/"
                     className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    {t("documentation")}
+                    {t("software")}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://hardware.cocktailberry.org/"
+                    className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  >
+                    {t("hardware")}
                   </a>
                 </li>
                 <li>
