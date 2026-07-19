@@ -3,6 +3,7 @@ import bart from "../../../public/images/machines/bart.jpg";
 import cb2go from "../../../public/images/machines/cb2go.jpg";
 import cbmk2 from "../../../public/images/machines/cbmk2.jpg";
 import cbmk3 from "../../../public/images/machines/cbmk3.jpg";
+import cbmk4 from "../../../public/images/machines/cbmk4.jpg";
 
 // all images are 1000x750px
 
@@ -29,6 +30,10 @@ const machineImages = [
   {
     src: cbmk3,
     name: "CBMK3",
+  },
+    {
+    src: cbmk4,
+    name: "CBMK4",
   },
 ].map((image) => ({ ...image, height: 1000, width: 750 }));
 
