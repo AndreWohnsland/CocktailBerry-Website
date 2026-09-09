@@ -70,7 +70,7 @@ const Snippet = ({ children, className = "" }: SnippetProps) => {
       className={`inline-flex max-w-full items-center gap-3 rounded-lg border border-stroke bg-gray-light px-4 py-2 text-left font-mono text-sm dark:border-stroke-dark dark:bg-dark ${className}`}
     >
       <span className="text-secondary">$</span>
-      <pre className="m-0 flex-1 overflow-x-auto whitespace-pre-wrap break-all bg-transparent p-0 text-body-color dark:text-body-color-dark">
+      <pre className="m-0 flex-1 overflow-x-auto whitespace-pre bg-transparent p-0 text-body-color dark:text-body-color-dark">
         {text}
       </pre>
       <span className="group relative shrink-0">
