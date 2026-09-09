@@ -11,8 +11,6 @@ import type { Feature } from "@/types/feature";
 
 type Translator = ReturnType<typeof useTranslations>;
 
-const iconStyle = { fontSize: 60 };
-
 // Product links are CocktailBerry's own affiliate links from the hardware docs
 // (https://docs.cocktailberry.org/hardware/) and are marked as sponsored.
 // `name` values are product names and stay untranslated; titles/descriptions
@@ -20,7 +18,7 @@ const iconStyle = { fontSize: 60 };
 const hardwareData = (t: Translator): Feature[] => [
   {
     id: 1,
-    icon: <MemoryIcon style={iconStyle} />,
+    icon: <MemoryIcon fontSize="inherit" />,
     title: t("components.pi.title"),
     paragraph: t("components.pi.description"),
     resources: [
@@ -43,7 +41,7 @@ const hardwareData = (t: Translator): Feature[] => [
   },
   {
     id: 2,
-    icon: <TouchAppIcon style={iconStyle} />,
+    icon: <TouchAppIcon fontSize="inherit" />,
     title: t("components.display.title"),
     paragraph: t("components.display.description"),
     resources: [
@@ -66,7 +64,7 @@ const hardwareData = (t: Translator): Feature[] => [
   },
   {
     id: 3,
-    icon: <SdCardIcon style={iconStyle} />,
+    icon: <SdCardIcon fontSize="inherit" />,
     title: t("components.sdCard.title"),
     paragraph: t("components.sdCard.description"),
     resources: [
@@ -79,7 +77,7 @@ const hardwareData = (t: Translator): Feature[] => [
   },
   {
     id: 4,
-    icon: <DeveloperBoardIcon style={iconStyle} />,
+    icon: <DeveloperBoardIcon fontSize="inherit" />,
     title: t("components.controller.title"),
     paragraph: t("components.controller.description"),
     resources: [
@@ -102,7 +100,7 @@ const hardwareData = (t: Translator): Feature[] => [
   },
   {
     id: 5,
-    icon: <PowerIcon style={iconStyle} />,
+    icon: <PowerIcon fontSize="inherit" />,
     title: t("components.power.title"),
     paragraph: t("components.power.description"),
     resources: [
@@ -125,7 +123,7 @@ const hardwareData = (t: Translator): Feature[] => [
   },
   {
     id: 6,
-    icon: <WavesIcon style={iconStyle} />,
+    icon: <WavesIcon fontSize="inherit" />,
     title: t("components.tubing.title"),
     paragraph: t("components.tubing.description"),
     resources: [
@@ -138,7 +136,7 @@ const hardwareData = (t: Translator): Feature[] => [
   },
   {
     id: 7,
-    icon: <CableIcon style={iconStyle} />,
+    icon: <CableIcon fontSize="inherit" />,
     title: t("components.wiring.title"),
     paragraph: t("components.wiring.description"),
     resources: [
@@ -153,7 +151,7 @@ const hardwareData = (t: Translator): Feature[] => [
   },
   {
     id: 8,
-    icon: <ContactlessIcon style={iconStyle} />,
+    icon: <ContactlessIcon fontSize="inherit" />,
     title: t("components.payment.title"),
     paragraph: t("components.payment.description"),
     resources: [

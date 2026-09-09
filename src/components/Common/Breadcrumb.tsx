@@ -12,15 +12,15 @@ const Breadcrumb = ({
   const t = useTranslations("breadcrumb");
 
   return (
-    <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
+    <section className="relative z-10 overflow-hidden pt-28 lg:pt-37.5">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 md:w-8/12 lg:w-7/12">
-            <div className="mb-8 max-w-[570px] md:mb-8 lg:mb-8">
-              <h1 className="mb-5 font-bold text-2xl text-black sm:text-3xl dark:text-white">
+            <div className="mb-8 max-w-142.5 md:mb-8 lg:mb-8">
+              <h1 className="mb-5 text-balance font-bold font-display text-3xl text-black sm:text-4xl dark:text-white">
                 {pageName}
               </h1>
-              <p className="font-medium text-base text-body-color leading-relaxed">
+              <p className="text-base text-body-color leading-relaxed dark:text-body-color-dark">
                 {description}
               </p>
             </div>
@@ -31,11 +31,11 @@ const Breadcrumb = ({
                 <li className="flex items-center">
                   <Link
                     href="/"
-                    className="pr-1 font-medium text-base text-body-color hover:text-primary"
+                    className="font-medium text-base text-body-color transition-colors duration-150 hover:text-primary"
                   >
                     {t("home")}
                   </Link>
-                  <span className="mr-3 block h-2 w-2 rotate-45 border-body-color border-t-2 border-r-2"></span>
+                  <span className="mx-2 block h-2 w-2 rotate-45 border-body-color border-t-2 border-r-2"></span>
                 </li>
                 <li className="font-medium text-base text-primary">
                   {pageName}
@@ -47,7 +47,7 @@ const Breadcrumb = ({
       </div>
 
       <div>
-        <span className="absolute top-0 left-0 z-[-1]">
+        <span className="absolute top-0 left-0 -z-1">
           <svg
             aria-hidden="true"
             width="287"
@@ -76,7 +76,7 @@ const Breadcrumb = ({
             </defs>
           </svg>
         </span>
-        <span className="absolute top-0 right-0 z-[-1]">
+        <span className="absolute top-0 right-0 -z-1">
           <svg
             aria-hidden="true"
             width="628"

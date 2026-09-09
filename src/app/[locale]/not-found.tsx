@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 
 const ErrorPage = () => {
   return (
-    <section className="relative z-10 pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
+    <section className="relative z-10 pt-36 pb-16 md:pb-20 lg:pt-45 lg:pb-28">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div className="mx-auto max-w-[530px] text-center">
+            <div className="mx-auto max-w-132.5 text-center">
               <div className="mx-auto mb-9 text-center">
                 <svg
                   aria-hidden="true"
@@ -146,17 +146,14 @@ const ErrorPage = () => {
                 The page you were looking for appears to have been moved,
                 deleted or does not exist.
               </p>
-              <Link
-                href="/"
-                className="rounded-md bg-brand px-8 py-3 font-bold text-base text-white shadow-signUp duration-300 hover:bg-white hover:text-brand md:px-9 lg:px-8 xl:px-9"
-              >
+              <Link href="/" className="btn btn-primary">
                 Back to Homepage
               </Link>
             </div>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 z-[-1] hidden sm:block">
+      <div className="absolute bottom-0 left-0 -z-1 hidden sm:block">
         <svg
           aria-hidden="true"
           width="406"
@@ -343,7 +340,7 @@ const ErrorPage = () => {
           </defs>
         </svg>
       </div>
-      <div className="absolute top-0 right-0 z-[-1] hidden sm:block">
+      <div className="absolute top-0 right-0 -z-1 hidden sm:block">
         <svg
           aria-hidden="true"
           width="406"

@@ -27,7 +27,7 @@ const Hardware = () => {
             width="800px"
             mb="2rem"
           />
-          <div className="mx-auto max-w-[800px] rounded-md bg-primary/5 px-6 py-5 text-center">
+          <div className="card mx-auto max-w-200 px-6 py-5 text-center">
             <p className="text-base text-body-color leading-relaxed md:text-lg">
               {t("docsCallout")}{" "}
               <a
@@ -68,11 +68,11 @@ const Hardware = () => {
             width="665px"
             mb="3rem"
           />
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-14">
+          <div className="flex flex-wrap justify-center gap-6">
             {hardwareData(t).map((feature) => (
               <div
                 key={feature.id}
-                className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]"
+                className="flex w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
               >
                 <SingleFeature feature={feature} />
               </div>
@@ -90,17 +90,17 @@ const Hardware = () => {
             width="800px"
             mb="3rem"
           />
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-14">
+          <div className="flex flex-wrap justify-center gap-6">
             {pumpData(t).map((feature) => (
               <div
                 key={feature.id}
-                className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(40%-1rem)]"
+                className="flex w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(40%-0.75rem)]"
               >
                 <SingleFeature feature={feature} />
               </div>
             ))}
           </div>
-          <p className="mx-auto mt-10 max-w-[800px] text-center text-base text-body-color italic leading-relaxed md:text-lg">
+          <p className="mx-auto mt-10 max-w-200 text-center text-base text-body-color italic leading-relaxed md:text-lg">
             {t("pumps.note")}
           </p>
         </div>
@@ -112,35 +112,35 @@ const Hardware = () => {
         className="relative z-10 bg-gray-light py-12 dark:bg-bg-color-dark"
       >
         <div className="container">
-          <div className="mx-auto max-w-[800px] text-center">
+          <div className="mx-auto max-w-200 text-center">
             <div className="mb-6 flex justify-center">
-              <div className="flex h-17.5 w-17.5 items-center justify-center rounded-md bg-primary/10 text-primary">
-                <ExtensionIcon style={{ fontSize: 60 }} />
+              <div className="flex size-16 items-center justify-center rounded-xl bg-primary/10 text-[2.5rem] text-primary">
+                <ExtensionIcon fontSize="inherit" />
               </div>
             </div>
-            <h2 className="!leading-tight mb-4 font-bold text-3xl text-black sm:text-4xl dark:text-white">
-              {t("extensions.title")}
-            </h2>
-            <p className="!leading-relaxed text-base text-body-color md:text-lg">
-              {t("extensions.description")}
-            </p>
+            <SectionTitle
+              title={t("extensions.title")}
+              paragraph={t("extensions.description")}
+              width="800px"
+              mb="0"
+            />
           </div>
         </div>
       </section>
 
       <section id="hardware-cta" className="relative z-10 py-16">
         <div className="container">
-          <div className="mx-auto max-w-[800px] text-center">
-            <h2 className="!leading-tight mb-4 font-bold text-3xl text-black sm:text-4xl dark:text-white">
-              {t("cta.title")}
-            </h2>
-            <p className="!leading-relaxed mb-10 text-base text-body-color md:text-lg">
-              {t("cta.subtitle")}
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="mx-auto max-w-200 text-center">
+            <SectionTitle
+              title={t("cta.title")}
+              paragraph={t("cta.subtitle")}
+              width="800px"
+              mb="2.5rem"
+            />
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link
                 href={{ pathname: "/installation", hash: "prerequisite" }}
-                className="inline-flex items-center gap-2 rounded-sm bg-brand px-6 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-brand/80"
+                className="btn btn-primary"
               >
                 <BuildIcon fontSize="small" />
                 {t("cta.install")}
@@ -149,7 +149,7 @@ const Hardware = () => {
                 href={DOCS_HARDWARE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-sm bg-secondary px-6 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-secondary/80"
+                className="btn btn-secondary"
               >
                 <MenuBookIcon fontSize="small" />
                 {t("cta.docs")}

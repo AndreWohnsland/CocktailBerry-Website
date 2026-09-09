@@ -2,8 +2,15 @@
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
+
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 .vscode
 # testing
 /coverage
@@ -14,6 +21,7 @@
 
 # typescript
 *.tsbuildinfo
+next-env.d.ts
 
 # production
 /build

@@ -5,14 +5,12 @@ import type { Feature } from "@/types/feature";
 
 type Translator = ReturnType<typeof useTranslations>;
 
-const iconStyle = { fontSize: 60 };
-
 // Supported pump types. Product links are CocktailBerry's own affiliate links
 // from the hardware docs and are marked as sponsored.
 const pumpData = (t: Translator): Feature[] => [
   {
     id: 1,
-    icon: <WaterDropIcon style={iconStyle} />,
+    icon: <WaterDropIcon fontSize="inherit" />,
     title: t("pumps.membrane.title"),
     paragraph: t("pumps.membrane.description"),
     resources: [
@@ -30,7 +28,7 @@ const pumpData = (t: Translator): Feature[] => [
   },
   {
     id: 2,
-    icon: <OpacityIcon style={iconStyle} />,
+    icon: <OpacityIcon fontSize="inherit" />,
     title: t("pumps.peristaltic.title"),
     paragraph: t("pumps.peristaltic.description"),
     resources: [

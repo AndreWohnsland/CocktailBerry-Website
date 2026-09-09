@@ -1,46 +1,18 @@
 import type { Testimonial } from "@/types/testimonial";
 
-const _starIcon = (
-  <svg
-    aria-hidden="true"
-    width="18"
-    height="16"
-    viewBox="0 0 18 16"
-    className="fill-current"
-  >
-    <path d="M9.09815 0.361679L11.1054 6.06601H17.601L12.3459 9.59149L14.3532 15.2958L9.09815 11.7703L3.84309 15.2958L5.85035 9.59149L0.595291 6.06601H7.0909L9.09815 0.361679Z" />
-  </svg>
-);
-
 const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
   const { name, content, designation } = testimonial;
 
-  // let ratingIcons = [];
-  // for (let index = 0; index < star; index++) {
-  //   ratingIcons.push(
-  //     <span key={index} className="text-yellow">
-  //       {starIcon}
-  //     </span>,
-  //   );
-  // }
-
   return (
-    <div className="w-full">
-      <div className="flex h-full flex-col rounded-sm bg-white p-8 shadow-two duration-300 hover:shadow-one lg:px-5 xl:px-8 dark:bg-dark dark:shadow-three dark:hover:shadow-gray-dark">
-        {/* <div className="mb-5 flex items-center space-x-1">{ratingIcons}</div> */}
-        <p className="mb-5 flex-1 border-body-color/10 border-b pb-5 text-base text-body-color leading-relaxed dark:border-white/10 dark:text-white">
-          “{content}
-        </p>
-        <div className="flex items-center">
-          <div className="w-full">
-            <h3 className="mb-1 font-semibold text-dark text-lg lg:text-base xl:text-lg dark:text-white">
-              {name}
-            </h3>
-            <p className="text-body-color text-sm">{designation}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <figure className="card flex h-full w-full flex-col p-8">
+      <blockquote className="flex-1 text-base text-black leading-relaxed dark:text-white">
+        “{content}”
+      </blockquote>
+      <figcaption className="mt-6 border-stroke border-t pt-5 dark:border-stroke-dark">
+        <div className="font-semibold text-black dark:text-white">{name}</div>
+        <div className="text-body-color text-sm">{designation}</div>
+      </figcaption>
+    </figure>
   );
 };
 

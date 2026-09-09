@@ -5,24 +5,24 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, paragraph, resources } = feature;
   const t = useTranslations("singleFeature");
   return (
-    <div className="w-full text-center">
-      <div className="wow fadeInUp" data-wow-delay=".15s">
-        <div className="flex content-center justify-center">
-          <div className="mb-6 flex h-17.5 w-17.5 items-center justify-center rounded-md bg-primary/10 text-primary">
-            {icon}
-          </div>
+    <div className="card flex h-full w-full flex-col p-6">
+      <div className="mb-4 flex items-center gap-4">
+        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-[1.75rem] text-primary">
+          {icon}
         </div>
-        <h3 className="mb-4 font-bold text-black text-xl sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
+        <h3 className="font-display text-black text-xl dark:text-white">
           {title}
         </h3>
-        <p className="pr-[10px] font-medium text-base text-body-color leading-relaxed">
-          {paragraph}
-        </p>
-        {/* also add some small header if resources are given */}
-        {resources && <h4 className="mt-4 text-md">{t("resources")}</h4>}
-        {/* map the resources, if there are any, to a list of links below */}
-        {resources && (
-          <ul className="mt-1">
+      </div>
+      <p className="flex-1 text-base text-body-color leading-relaxed dark:text-body-color-dark">
+        {paragraph}
+      </p>
+      {resources && (
+        <div className="mt-5 border-stroke border-t pt-4 dark:border-stroke-dark">
+          <span className="mb-2 block font-semibold text-body-color text-xs uppercase tracking-wide">
+            {t("resources")}
+          </span>
+          <ul className="flex flex-wrap gap-2">
             {resources.map((resource) => (
               <li key={resource.url}>
                 <a
@@ -33,15 +33,15 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
                       ? "sponsored nofollow noopener noreferrer"
                       : "noopener noreferrer"
                   }
-                  className="text-primary underline"
+                  className="inline-block rounded-md border border-primary/30 px-3 py-1 text-primary text-sm transition-colors duration-150 hover:bg-primary/10"
                 >
                   {resource.name}
                 </a>
               </li>
             ))}
           </ul>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -4,7 +4,9 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // Standalone output is only for the Docker image. On Vercel it breaks
+  // output file tracing in the onBuildComplete step (Next 16.3+).
+  output: process.env.VERCEL ? undefined : "standalone",
   serverExternalPackages: ["sharp"],
   images: {
     remotePatterns: [

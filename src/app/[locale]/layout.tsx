@@ -14,19 +14,18 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://cocktailberry.org"),
   title: {
-    default:
-      "CocktailBerry - Open Source Raspberry Pi Cocktail Maker & Machine Software",
+    default: "CocktailBerry - Open Source Cocktail Machine Software & Hardware",
     template: "%s | CocktailBerry",
   },
   description:
-    "CocktailBerry: Free open-source Raspberry Pi cocktail maker software. Build your own DIY cocktail maker or automated cocktail machine.",
+    "CocktailBerry: Free open-source software and hardware for Raspberry Pi cocktail machines. Build your own DIY cocktail maker or automated cocktail machine.",
   authors: { name: "Andre Wohnsland" },
   creator: "CocktailBerry Team",
   publisher: "CocktailBerry",
   applicationName: "CocktailBerry",
   generator: "Next.js",
   category: "Technology",
-  classification: "Open Source Software",
+  classification: "Open Source Software and Hardware",
   keywords: [
     "cocktail",
     "cocktailberry",
@@ -68,7 +67,7 @@ export const metadata: Metadata = {
         url: "https://cocktailberry.org/CocktailBerry.png",
         width: 1200,
         height: 630,
-        alt: "CocktailBerry - Open Source Cocktail Machine Software",
+        alt: "CocktailBerry - Open Source Cocktail Machine Software and Hardware",
       },
     ],
   },
@@ -113,9 +112,11 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <html suppressHydrationWarning lang={locale}>
+    <html suppressHydrationWarning lang={locale} data-scroll-behavior="smooth">
       <head />
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <body
+        className={`bg-[#FCFCFC] antialiased dark:bg-black ${inter.className}`}
+      >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <Header />

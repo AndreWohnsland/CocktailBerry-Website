@@ -7,7 +7,7 @@ It is usually hosted at [cocktailberry.org](https://cocktailberry.org/).
 
 ## Development
 
-To run the website locally, you need to have [Node.js](https://nodejs.org/) and [yarn](https://classic.yarnpkg.com/en/) installed. Then, you can clone the repository and install the dependencies:
+To run the website locally, you need to have [Node.js](https://nodejs.org/) installed. The project uses [Yarn](https://yarnpkg.com/), which is provided through Node's Corepack (`corepack enable` once). Then, you can clone the repository and install the dependencies:
 
 ```bash
 git clone https://github.com/AndreWohnsland/CocktailBerry-Website.git

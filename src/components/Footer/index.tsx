@@ -7,11 +7,11 @@ const Footer = () => {
   const t = useTranslations("footer");
 
   return (
-    <footer className="relative z-10 bg-white pt-10 md:pt-12 lg:pt-14 dark:bg-gray-dark">
+    <footer className="relative z-10 border-stroke border-t bg-white pt-10 md:pt-12 lg:pt-14 dark:border-stroke-dark dark:bg-gray-dark">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-            <div className="mb-6 max-w-[360px] lg:mb-10">
+            <div className="mb-6 max-w-90 lg:mb-10">
               <Link href="/" className="mb-2 inline-block">
                 <Image
                   src="/images/logo/logo-2.svg"
@@ -36,14 +36,14 @@ const Footer = () => {
 
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
             <div className="mb-8 lg:mb-12">
-              <h2 className="mb-6 font-bold text-black text-xl dark:text-white">
+              <h2 className="mb-6 font-bold font-display text-black text-xl dark:text-white">
                 {t("usefulLinks")}
               </h2>
               <ul>
                 <li>
                   <a
                     href="https://docs.cocktailberry.org/"
-                    className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mb-1 inline-block text-base text-body-color transition-colors duration-150 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     {t("software")}
                   </a>
@@ -51,7 +51,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://hardware.cocktailberry.org/"
-                    className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mb-1 inline-block text-base text-body-color transition-colors duration-150 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     {t("hardware")}
                   </a>
@@ -59,7 +59,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://github.com/AndreWohnsland/CocktailBerry"
-                    className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mb-1 inline-block text-base text-body-color transition-colors duration-150 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     {t("githubSource")}
                   </a>
@@ -67,7 +67,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://stats-cocktailberry.streamlit.app/"
-                    className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mb-1 inline-block text-base text-body-color transition-colors duration-150 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     {t("cocktailStats")}
                   </a>
@@ -78,14 +78,14 @@ const Footer = () => {
 
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
             <div className="mb-8 lg:mb-12">
-              <h2 className="mb-6 font-bold text-black text-xl dark:text-white">
+              <h2 className="mb-6 font-bold font-display text-black text-xl dark:text-white">
                 {t("terms")}
               </h2>
               <ul>
                 <li>
                   <Link
                     href="/imprint"
-                    className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mb-1 inline-block text-base text-body-color transition-colors duration-150 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     {t("imprint")}
                   </Link>
@@ -96,14 +96,14 @@ const Footer = () => {
 
           <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
             <div className="mb-8 lg:mb-12">
-              <h2 className="mb-6 font-bold text-black text-xl dark:text-white">
+              <h2 className="mb-6 font-bold font-display text-black text-xl dark:text-white">
                 {t("supportHelp")}
               </h2>
               <ul>
                 <li>
                   <a
                     href="https://docs.cocktailberry.org/faq/"
-                    className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mb-1 inline-block text-base text-body-color transition-colors duration-150 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     {t("faq")}
                   </a>
@@ -111,7 +111,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://github.com/AndreWohnsland/CocktailBerry/issues/new/choose"
-                    className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mb-1 inline-block text-base text-body-color transition-colors duration-150 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     {t("openGithubIssue")}
                   </a>
@@ -119,7 +119,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://github.com/AndreWohnsland/CocktailBerry/discussions/new/choose"
-                    className="mb-1 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mb-1 inline-block text-base text-body-color transition-colors duration-150 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     {t("askDiscussions")}
                   </a>

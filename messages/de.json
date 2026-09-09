@@ -11,11 +11,13 @@
       "githubSource": "GitHub Code",
       "cocktailStats": "CocktailBerry Stats",
       "demoApp": "Demo App"
-    }
+    },
+    "switchLanguage": "Sprache wechseln"
   },
   "hero": {
-    "title": "Open-Source Software für deine Cocktailmaschine",
-    "description": "CocktailBerry ist eine umfangreiche Open-Source-Plattform zum Bau individueller Cocktailmaschinen auf dem Raspberry Pi oder anderen SBCs. Mit Python, Qt und React bietet sie eine flexible und skalierbare Lösung für einzigartige, automatisierte Cocktail-Erlebnisse. Ob du eine einzelne Maschine baust oder mehrere einsetzt - CocktailBerry bietet konsistente Software für alle Installationen. Detaillierte Informationen, Installationsschritte und Einrichtungsanleitung findest du in der Dokumentation.",
+    "title": "Der <accent>Open-Source</accent> Weg zu deiner Cocktailmaschine",
+    "description": "CocktailBerry ist eine umfangreiche Open-Source-Plattform zum Bau individueller Cocktailmaschinen auf dem Raspberry Pi oder anderen SBCs. Ob du eine einzelne Maschine baust oder mehrere einsetzt, CocktailBerry bietet konsistente Software für alle Installationen.",
+    "designs": "Du willst keine eigene Maschine entwerfen? Nutze eines unserer <link>fertigen Designs</link>, inklusive Bauanleitungen und Fertigungsdateien.",
     "getStarted": "Loslegen",
     "software": "Software",
     "hardware": "Hardware",
@@ -164,8 +166,8 @@
   },
   "Meta": {
     "home": {
-      "title": "CocktailBerry - Open-Source Cocktailmaschinen-Software",
-      "description": "Baue deine eigene automatisierte Cocktailmaschine mit der CocktailBerry Software! Nutze einen Raspberry Pi oder ein anderes SBC, um einen individuellen Cocktailmixer zu erstellen."
+      "title": "CocktailBerry - Open-Source Software und Hardware für Cocktailmaschinen",
+      "description": "Baue deine eigene automatisierte Cocktailmaschine mit der Open-Source Software und Hardware von CocktailBerry! Nutze einen Raspberry Pi oder ein anderes SBC, um einen individuellen Cocktailmixer zu erstellen."
     },
     "impressions": {
       "title": "DIY Cocktailmaker Galerie",

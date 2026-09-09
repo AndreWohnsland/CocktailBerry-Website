@@ -61,7 +61,7 @@ const Impressions = () => {
                   src={image.src}
                   alt={t("machineAlt", { name: image.name })}
                   placeholder="blur"
-                  className="rounded-lg"
+                  className="rounded-lg outline-1 outline-black/10 -outline-offset-1 dark:outline-white/10"
                 />
               </div>
             ))}
