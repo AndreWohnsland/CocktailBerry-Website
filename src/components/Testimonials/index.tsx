@@ -37,11 +37,11 @@ const Testimonials = () => {
       <div className="container">
         <SectionTitle title={t("title")} paragraph={t("subtitle")} center />
 
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-10">
+        <div className="flex flex-wrap justify-center gap-6">
           {testimonialData.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="flex w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]"
+              className="flex w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
             >
               <SingleTestimonial testimonial={testimonial} />
             </div>

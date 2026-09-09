@@ -22,11 +22,11 @@ const Installation = () => {
             center
             width="665px"
           />
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-14">
+          <div className="flex flex-wrap justify-center gap-6">
             {prerequisiteData(t).map((feature) => (
               <div
                 key={feature.id}
-                className="w-full lg:w-[calc(50%-1rem)] 2xl:w-[calc(33.333%-1.334rem)]"
+                className="flex w-full lg:w-[calc(50%-0.75rem)] 2xl:w-[calc(33.333%-1rem)]"
               >
                 <SingleFeature feature={feature} />
               </div>

@@ -59,10 +59,10 @@ const Header = () => {
 
   return (
     <header
-      className={`header top-0 left-0 z-40 flex w-full items-center ${
+      className={`header fixed top-0 left-0 z-9999 flex w-full items-center transition-[background-color,box-shadow,backdrop-filter] ${
         sticky
-          ? "fixed z-9999 bg-white/80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark/80 dark:shadow-sticky-dark"
-          : "absolute bg-transparent"
+          ? "bg-white/80 shadow-sticky backdrop-blur-sm dark:bg-gray-dark/80 dark:shadow-sticky-dark"
+          : "bg-transparent"
       }`}
     >
       <div className="container">
@@ -98,28 +98,28 @@ const Header = () => {
                 onClick={navbarToggleHandler}
                 id="navbarToggler"
                 aria-label="Mobile Menu"
-                className="absolute top-1/2 right-4 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                className="absolute top-1/2 right-4 block -translate-y-1/2 rounded-lg px-3 py-1.5 ring-primary focus:ring-2 lg:hidden"
               >
                 <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                    navbarOpen ? "top-[7px] rotate-45" : " "
+                  className={`relative my-1.5 block h-0.5 w-7.5 bg-black transition-[top,rotate,opacity] duration-200 dark:bg-white ${
+                    navbarOpen ? "top-1.75 rotate-45" : " "
                   }`}
                 />
                 <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                  className={`relative my-1.5 block h-0.5 w-7.5 bg-black transition-[top,rotate,opacity] duration-200 dark:bg-white ${
                     navbarOpen ? "opacity-0" : " "
                   }`}
                 />
                 <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                    navbarOpen ? "top-[-8px] -rotate-45" : " "
+                  className={`relative my-1.5 block h-0.5 w-7.5 bg-black transition-[top,rotate,opacity] duration-200 dark:bg-white ${
+                    navbarOpen ? "-top-2 -rotate-45" : " "
                   }`}
                 />
               </button>
               <nav
                 ref={navbarRef}
                 id="navbarCollapse"
-                className={`navbar lg:!bg-transparent absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:p-0 lg:opacity-100 dark:border-body-color/20 dark:bg-dark ${
+                className={`navbar absolute right-0 z-30 w-62.5 rounded-lg border border-stroke bg-white px-6 py-4 shadow-two transition-[top,opacity,visibility] duration-200 lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent! lg:p-0 lg:opacity-100 lg:shadow-none dark:border-stroke-dark dark:bg-dark ${
                   navbarOpen
                     ? "visibility top-full opacity-100"
                     : "invisible top-[120%] opacity-0"
@@ -135,7 +135,7 @@ const Header = () => {
                             hash: menuItem.hash,
                           }}
                           onClick={() => setNavbarOpen(false)}
-                          className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                          className={`flex py-2 text-base transition-colors duration-150 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                             usePathName === menuItem.path
                               ? "text-primary dark:text-white"
                               : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
@@ -148,7 +148,7 @@ const Header = () => {
                           {/** biome-ignore lint/a11y/useKeyWithClickEvents: keep */}
                           <p
                             onClick={() => handleSubmenu(index)}
-                            className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
+                            className="flex cursor-pointer items-center justify-between py-2 text-base text-dark transition-colors duration-150 group-hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
                           >
                             {menuItem.title}
                             <span className="pl-3">
@@ -168,7 +168,7 @@ const Header = () => {
                             </span>
                           </p>
                           <div
-                            className={`submenu relative top-full left-0 rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full dark:bg-dark ${
+                            className={`submenu relative top-full left-0 rounded-lg bg-white transition-[top,opacity] duration-200 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-62.5 lg:border lg:border-stroke lg:p-4 lg:opacity-0 lg:shadow-two lg:group-hover:visible lg:group-hover:top-full dark:bg-dark lg:dark:border-stroke-dark ${
                               openIndex === index ? "block" : "hidden"
                             }`}
                           >
@@ -180,7 +180,7 @@ const Header = () => {
                                   }}
                                   key={submenuItem.path}
                                   onClick={() => setNavbarOpen(false)}
-                                  className="flex items-center gap-2 rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
+                                  className="flex items-center gap-2 rounded py-2.5 text-dark text-sm transition-colors duration-150 hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
                                 >
                                   {submenuItem.icon}
                                   {submenuItem.title}
@@ -190,7 +190,7 @@ const Header = () => {
                                   href={submenuItem.path}
                                   key={submenuItem.path}
                                   onClick={() => setNavbarOpen(false)}
-                                  className="flex items-center gap-2 rounded py-2.5 text-dark text-sm hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
+                                  className="flex items-center gap-2 rounded py-2.5 text-dark text-sm transition-colors duration-150 hover:text-primary lg:px-3 dark:text-white/70 dark:hover:text-white"
                                   target={
                                     submenuItem.newTab ? "_blank" : undefined
                                   }
@@ -216,10 +216,10 @@ const Header = () => {
             <div className="flex items-center justify-end gap-2 pr-16 lg:pr-0">
               <a
                 href="https://github.com/AndreWohnsland/CocktailBerry"
-                className="mr-1 hidden items-center whitespace-nowrap rounded-sm bg-brand px-4 py-3 font-medium text-base text-white shadow-btn transition duration-300 ease-in-up hover:bg-brand/90 hover:shadow-btn-hover md:inline-flex"
+                className="btn btn-primary mr-1 hidden whitespace-nowrap px-4 py-2 md:inline-flex"
               >
-                <GitHubIcon />
-                <span className="hidden pl-2 xl:inline">Source Code</span>
+                <GitHubIcon fontSize="small" />
+                <span className="hidden xl:inline">Source Code</span>
               </a>
               <LanguageSwitcher />
               <div>

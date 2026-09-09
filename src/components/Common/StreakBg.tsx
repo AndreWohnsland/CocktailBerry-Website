@@ -1,7 +1,7 @@
 const StreakBg = () => {
   return (
     <>
-      <div className="absolute top-5 right-0 z-[-1]">
+      <div className="absolute top-5 right-0 -z-1">
         <svg
           aria-hidden="true"
           width="238"
@@ -56,7 +56,7 @@ const StreakBg = () => {
           </defs>
         </svg>
       </div>
-      <div className="absolute bottom-5 left-0 z-[-1]">
+      <div className="absolute bottom-5 left-0 -z-1">
         <svg
           aria-hidden="true"
           width="279"

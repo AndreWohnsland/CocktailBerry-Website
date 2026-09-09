@@ -9,7 +9,7 @@ type Translator = ReturnType<typeof useTranslations>;
 const prerequisiteData = (t: Translator): Feature[] => [
   {
     id: 1,
-    icon: <MemoryIcon style={{ fontSize: 60 }} />,
+    icon: <MemoryIcon fontSize="inherit" />,
     title: t("prerequisites.hardware.title"),
     paragraph: t("prerequisites.hardware.description"),
     resources: [
@@ -21,7 +21,7 @@ const prerequisiteData = (t: Translator): Feature[] => [
   },
   {
     id: 2,
-    icon: <DownloadIcon style={{ fontSize: 60 }} />,
+    icon: <DownloadIcon fontSize="inherit" />,
     title: t("prerequisites.prepare.title"),
     paragraph: t("prerequisites.prepare.description"),
     resources: [
@@ -33,7 +33,7 @@ const prerequisiteData = (t: Translator): Feature[] => [
   },
   {
     id: 3,
-    icon: <TerminalIcon style={{ fontSize: 60 }} />,
+    icon: <TerminalIcon fontSize="inherit" />,
     title: t("prerequisites.terminal.title"),
     paragraph: t("prerequisites.terminal.description"),
     resources: [

@@ -31,7 +31,7 @@ const machineImages = [
     src: cbmk3,
     name: "CBMK3",
   },
-    {
+  {
     src: cbmk4,
     name: "CBMK4",
   },

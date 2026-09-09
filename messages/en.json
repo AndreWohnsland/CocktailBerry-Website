@@ -14,8 +14,9 @@
     }
   },
   "hero": {
-    "title": "Free and Open-Source Software for your Cocktail Machine",
-    "description": "CocktailBerry is a powerful open-source platform for building custom cocktail machines on the Raspberry Pi or other SBCs. Leveraging Python, Qt, and React, it offers a flexible and scalable solution for creating unique automated bartending experiences. Whether you are building a single machine or deploying a fleet, CocktailBerry provides consistent software across all installations. Detailed information, installation steps and set up can be found in the documentation.",
+    "title": "The <accent>Open-Source</accent> Way to Build your Cocktail Machine",
+    "description": "CocktailBerry is a powerful open-source platform for building custom cocktail machines on the Raspberry Pi or other SBCs. Whether you are building a single machine or deploying a fleet, it provides consistent software across all installations.",
+    "designs": "Don't want to design your own machine? Use one of our <link>ready-made designs</link>, complete with build guides and fabrication files.",
     "getStarted": "Get Started",
     "software": "Software",
     "hardware": "Hardware",
@@ -164,8 +165,8 @@
   },
   "Meta": {
     "home": {
-      "title": "CocktailBerry - Open Source Cocktail Machine Software",
-      "description": "Build your own automated cocktail machine with the CocktailBerry software! Use a Raspberry Pi or any other SBC to create a custom cocktail maker."
+      "title": "CocktailBerry - Open Source Cocktail Machine Software and Hardware",
+      "description": "Build your own automated cocktail machine with CocktailBerry's open-source software and hardware! Use a Raspberry Pi or any other SBC to create a custom cocktail maker."
     },
     "impressions": {
       "title": "DIY Cocktail Maker Gallery",

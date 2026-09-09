@@ -13,68 +13,86 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative z-10 overflow-hidden bg-white pt-[120px] pb-16 md:pt-[150px] md:pb-[100px] xl:pt-[180px] xl:pb-[130px] 2xl:pt-[210px] 2xl:pb-[170px] dark:bg-gray-dark"
+      className="relative z-10 overflow-hidden bg-white pt-30 pb-16 md:pt-37.5 md:pb-25 xl:pt-45 xl:pb-32.5 dark:bg-gray-dark"
     >
       <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div className="mx-auto max-w-[800px] text-center">
-              <h1 className="mb-5 font-bold text-3xl text-black leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight dark:text-white">
-                {t("title")}
-              </h1>
-              <p className="!leading-relaxed mb-12 text-base text-body-color sm:text-lg md:text-xl dark:text-body-color-dark">
-                {t("description")}
-              </p>
-              <div className="mb-12 flex flex-wrap items-center justify-center gap-4">
-                <Link
-                  href={{ pathname: "/installation", hash: "prerequisite" }}
-                  className="inline-flex items-center gap-2 rounded-sm bg-brand px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-brand/80"
-                >
-                  <LocalFireDepartmentIcon fontSize="small" />
-                  {t("getStarted")}
-                </Link>
-                <a
-                  href="https://docs.cocktailberry.org/"
-                  className="inline-flex items-center gap-2 rounded-sm bg-secondary px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-secondary/80"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <MenuBookIcon fontSize="small" />
-                  {t("software")}
-                </a>
+        <div className="mx-auto max-w-200 text-center">
+          <h1 className="mb-8 font-bold font-display text-4xl text-black leading-tight sm:text-5xl md:text-6xl dark:text-white">
+            {t.rich("title", {
+              accent: (chunks) => (
+                <span className="text-primary">{chunks}</span>
+              ),
+            })}
+          </h1>
+          <p className="mx-auto mb-4 max-w-180 text-base text-body-color leading-relaxed sm:text-lg dark:text-body-color-dark">
+            {t("description")}
+          </p>
+          <p className="mx-auto mb-12 max-w-180 text-base text-body-color leading-relaxed sm:text-lg dark:text-body-color-dark">
+            {t.rich("designs", {
+              link: (chunks) => (
                 <a
                   href="https://hardware.cocktailberry.org/"
-                  className="inline-flex items-center gap-2 rounded-sm bg-secondary px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-secondary/80"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-primary underline"
                 >
-                  <MemoryIcon fontSize="small" />
-                  {t("hardware")}
+                  {chunks}
                 </a>
-                <a
-                  href="https://github.com/AndreWohnsland/CocktailBerry"
-                  className="inline-flex items-center gap-2 rounded-sm bg-black px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <StarIcon fontSize="small" />
-                  {t("starGithub")}
-                </a>
-                <a
-                  href="https://demo.cocktailberry.org"
-                  className="inline-flex items-center gap-2 rounded-sm bg-brand px-4 py-4 font-semibold text-base text-white duration-300 ease-in-out hover:bg-brand/80"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LocalBarIcon fontSize="small" />
-                  {t("v2Demo")}
-                </a>
-              </div>
+              ),
+            })}
+          </p>
+          {/* Mobile: full-width primary, then a 2x2 grid. From sm the grid
+              dissolves (`contents`) and all buttons flow in one row. */}
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
+            <Link
+              href={{ pathname: "/installation", hash: "prerequisite" }}
+              className="btn btn-primary"
+            >
+              <LocalFireDepartmentIcon fontSize="small" />
+              {t("getStarted")}
+            </Link>
+            <div className="grid grid-cols-2 gap-3 sm:contents">
+              <a
+                href="https://docs.cocktailberry.org/"
+                className="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MenuBookIcon fontSize="small" />
+                {t("software")}
+              </a>
+              <a
+                href="https://hardware.cocktailberry.org/"
+                className="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MemoryIcon fontSize="small" />
+                {t("hardware")}
+              </a>
+              <a
+                href="https://demo.cocktailberry.org"
+                className="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LocalBarIcon fontSize="small" />
+                {t("v2Demo")}
+              </a>
+              <a
+                href="https://github.com/AndreWohnsland/CocktailBerry"
+                className="btn btn-dark"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <StarIcon fontSize="small" />
+                {t("starGithub")}
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <div className="absolute top-0 right-0 z-[-1] opacity-30 lg:opacity-100">
+      <div className="absolute top-0 right-0 -z-1 opacity-30 lg:opacity-100">
         <svg
           aria-hidden="true"
           width="450"
@@ -208,7 +226,7 @@ const Hero = () => {
           </defs>
         </svg>
       </div>
-      <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
+      <div className="absolute bottom-0 left-0 -z-1 opacity-30 lg:opacity-100">
         <svg
           aria-hidden="true"
           width="364"
