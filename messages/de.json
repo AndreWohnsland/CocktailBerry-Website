@@ -11,7 +11,8 @@
       "githubSource": "GitHub Code",
       "cocktailStats": "CocktailBerry Stats",
       "demoApp": "Demo App"
-    }
+    },
+    "switchLanguage": "Sprache wechseln"
   },
   "hero": {
     "title": "Der <accent>Open-Source</accent> Weg zu deiner Cocktailmaschine",

@@ -33,7 +33,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
                       ? "sponsored nofollow noopener noreferrer"
                       : "noopener noreferrer"
                   }
-                  className="inline-block rounded-full border border-primary/30 px-3 py-1 text-primary text-sm transition-colors duration-150 hover:bg-primary/10"
+                  className="inline-block rounded-md border border-primary/30 px-3 py-1 text-primary text-sm transition-colors duration-150 hover:bg-primary/10"
                 >
                   {resource.name}
                 </a>

@@ -114,7 +114,9 @@ export default async function LocaleLayout({
   return (
     <html suppressHydrationWarning lang={locale} data-scroll-behavior="smooth">
       <head />
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <body
+        className={`bg-[#FCFCFC] antialiased dark:bg-black ${inter.className}`}
+      >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <Header />

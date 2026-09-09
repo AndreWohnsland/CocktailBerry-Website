@@ -1,10 +1,11 @@
 "use client";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "@/i18n/routing";
 
 const LanguageSwitcher = () => {
   const locale = useLocale();
+  const t = useTranslations("header");
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -12,11 +13,18 @@ const LanguageSwitcher = () => {
 
   useEffect(() => {
     if (!isOpen) return;
-    const close = (event: MouseEvent) => {
+    const closeOnOutsideClick = (event: MouseEvent) => {
       if (!rootRef.current?.contains(event.target as Node)) setIsOpen(false);
     };
-    document.addEventListener("mousedown", close);
-    return () => document.removeEventListener("mousedown", close);
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+    document.addEventListener("mousedown", closeOnOutsideClick);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("mousedown", closeOnOutsideClick);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
   }, [isOpen]);
 
   const languages = [
@@ -36,8 +44,9 @@ const LanguageSwitcher = () => {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 rounded-lg px-3 py-2 font-medium text-base text-dark transition-colors duration-150 hover:text-primary dark:text-white/70 dark:hover:text-white"
-        aria-label="Switch language"
+        className="flex h-10 items-center justify-center gap-2 rounded-lg px-2 text-dark transition-[background-color,color] duration-150 hover:bg-gray-light hover:text-primary focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 sm:px-3 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white"
+        aria-label={t("switchLanguage")}
+        aria-expanded={isOpen}
       >
         <span className="text-xl leading-none">{currentLanguage?.flag}</span>
         <span className="hidden w-16 sm:inline">{currentLanguage?.label}</span>
@@ -67,7 +76,8 @@ const LanguageSwitcher = () => {
             type="button"
             key={lang.code}
             onClick={() => switchLanguage(lang.code)}
-            className={`flex w-full items-center gap-2 px-4 py-2 text-left text-sm transition-colors duration-150 hover:bg-black/5 dark:hover:bg-white/5 ${
+            aria-current={locale === lang.code || undefined}
+            className={`flex w-full items-center gap-2 px-4 py-2 text-left text-sm transition-[background-color,color] duration-150 hover:bg-black/5 focus-visible:bg-black/5 focus-visible:outline-none dark:focus-visible:bg-white/5 dark:hover:bg-white/5 ${
               locale === lang.code ? "font-semibold text-primary" : ""
             }`}
           >

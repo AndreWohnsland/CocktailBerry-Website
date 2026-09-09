@@ -114,16 +114,16 @@ const Hardware = () => {
         <div className="container">
           <div className="mx-auto max-w-200 text-center">
             <div className="mb-6 flex justify-center">
-              <div className="flex size-16 items-center justify-center rounded-2xl bg-primary/10 text-[2.5rem] text-primary">
+              <div className="flex size-16 items-center justify-center rounded-xl bg-primary/10 text-[2.5rem] text-primary">
                 <ExtensionIcon fontSize="inherit" />
               </div>
             </div>
-            <h2 className="mb-4 font-bold font-display text-3xl text-black leading-tight! sm:text-4xl dark:text-white">
-              {t("extensions.title")}
-            </h2>
-            <p className="text-base text-body-color leading-relaxed! md:text-lg dark:text-body-color-dark">
-              {t("extensions.description")}
-            </p>
+            <SectionTitle
+              title={t("extensions.title")}
+              paragraph={t("extensions.description")}
+              width="800px"
+              mb="0"
+            />
           </div>
         </div>
       </section>
@@ -131,12 +131,12 @@ const Hardware = () => {
       <section id="hardware-cta" className="relative z-10 py-16">
         <div className="container">
           <div className="mx-auto max-w-200 text-center">
-            <h2 className="mb-4 font-bold font-display text-3xl text-black leading-tight! sm:text-4xl dark:text-white">
-              {t("cta.title")}
-            </h2>
-            <p className="mb-10 text-base text-body-color leading-relaxed! md:text-lg dark:text-body-color-dark">
-              {t("cta.subtitle")}
-            </p>
+            <SectionTitle
+              title={t("cta.title")}
+              paragraph={t("cta.subtitle")}
+              width="800px"
+              mb="2.5rem"
+            />
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link
                 href={{ pathname: "/installation", hash: "prerequisite" }}

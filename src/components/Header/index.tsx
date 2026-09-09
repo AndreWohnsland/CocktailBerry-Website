@@ -98,7 +98,7 @@ const Header = () => {
                 onClick={navbarToggleHandler}
                 id="navbarToggler"
                 aria-label="Mobile Menu"
-                className="absolute top-1/2 right-4 block -translate-y-1/2 rounded-lg px-3 py-1.5 ring-primary focus:ring-2 lg:hidden"
+                className="absolute top-1/2 right-4 block -translate-y-1/2 rounded-lg px-3 py-1.5 focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 lg:hidden"
               >
                 <span
                   className={`relative my-1.5 block h-0.5 w-7.5 bg-black transition-[top,rotate,opacity] duration-200 dark:bg-white ${

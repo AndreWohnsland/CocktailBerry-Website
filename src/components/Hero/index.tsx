@@ -17,17 +17,17 @@ const Hero = () => {
     >
       <div className="container">
         <div className="mx-auto max-w-200 text-center">
-          <h1 className="mb-8 font-bold font-display text-4xl text-black leading-tight sm:text-5xl md:text-6xl dark:text-white">
+          <h1 className="mb-8 text-balance font-bold font-display text-4xl text-black leading-tight sm:text-5xl md:text-6xl dark:text-white">
             {t.rich("title", {
               accent: (chunks) => (
                 <span className="text-primary">{chunks}</span>
               ),
             })}
           </h1>
-          <p className="mx-auto mb-4 max-w-180 text-base text-body-color leading-relaxed sm:text-lg dark:text-body-color-dark">
+          <p className="mx-auto mb-4 max-w-160 text-pretty text-base text-body-color leading-relaxed sm:text-lg dark:text-body-color-dark">
             {t("description")}
           </p>
-          <p className="mx-auto mb-12 max-w-180 text-base text-body-color leading-relaxed sm:text-lg dark:text-body-color-dark">
+          <p className="mx-auto mb-12 max-w-160 text-pretty text-base text-body-color leading-relaxed sm:text-lg dark:text-body-color-dark">
             {t.rich("designs", {
               link: (chunks) => (
                 <a
