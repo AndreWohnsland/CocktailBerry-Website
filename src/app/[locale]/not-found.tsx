@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const ErrorPage = () => {
   return (
-    <section className="relative z-10 pt-36 pb-16 md:pb-20 lg:pt-45 lg:pb-28">
+    <section className="relative z-10 pt-30 pb-16 md:pb-20 lg:pt-38 lg:pb-28">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">

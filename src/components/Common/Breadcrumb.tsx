@@ -12,7 +12,7 @@ const Breadcrumb = ({
   const t = useTranslations("breadcrumb");
 
   return (
-    <section className="relative z-10 overflow-hidden pt-28 lg:pt-37.5">
+    <section className="relative z-10 overflow-hidden pt-22 lg:pt-30">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 md:w-8/12 lg:w-7/12">

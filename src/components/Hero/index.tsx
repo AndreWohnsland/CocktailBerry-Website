@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative z-10 overflow-hidden bg-white pt-30 pb-16 md:pt-37.5 md:pb-25 xl:pt-45 xl:pb-32.5 dark:bg-gray-dark"
+      className="relative z-10 overflow-hidden bg-white pt-24 pb-16 md:pt-30 md:pb-25 xl:pt-38 xl:pb-32.5 dark:bg-gray-dark"
     >
       <div className="container">
         <div className="mx-auto max-w-200 text-center">
