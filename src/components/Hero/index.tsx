@@ -41,9 +41,9 @@ const Hero = () => {
               ),
             })}
           </p>
-          {/* Mobile: full-width primary, then a 2x2 grid. From sm the grid
-              dissolves (`contents`) and all buttons flow in one row. */}
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
+          {/* Below lg: a centered stack of the primary button over a 2x2 grid. From lg
+              the grid dissolves (`contents`) and all five buttons flow in one row. */}
+          <div className="mx-auto flex max-w-md flex-col gap-3 lg:max-w-none lg:flex-row lg:flex-wrap lg:justify-center">
             <Link
               href={{ pathname: "/installation", hash: "prerequisite" }}
               className="btn btn-primary"
@@ -51,7 +51,7 @@ const Hero = () => {
               <LocalFireDepartmentIcon fontSize="small" />
               {t("getStarted")}
             </Link>
-            <div className="grid grid-cols-2 gap-3 sm:contents">
+            <div className="grid grid-cols-2 gap-3 lg:contents">
               <a
                 href="https://docs.cocktailberry.org/"
                 className="btn btn-secondary"

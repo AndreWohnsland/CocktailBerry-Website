@@ -13,14 +13,12 @@ const Installation = () => {
     <>
       <section
         id="prerequisite"
-        className="relative z-10 bg-gray-light py-10 dark:bg-bg-color-dark"
+        className="section relative z-10 bg-gray-light dark:bg-bg-color-dark"
       >
         <div className="container">
           <SectionTitle
             title={t("prerequisites.title")}
             paragraph={t("prerequisites.subtitle")}
-            center
-            width="665px"
           />
           <div className="flex flex-wrap justify-center gap-6">
             {prerequisiteData(t).map((feature) => (
@@ -34,14 +32,11 @@ const Installation = () => {
           </div>
         </div>
       </section>
-      <section id="steps" className="relative z-10 py-10">
+      <section id="steps" className="section relative z-10">
         <div className="container">
           <SectionTitle
             title={t("steps.title")}
             paragraph={t("steps.subtitle")}
-            center
-            width="800px"
-            mb="3rem"
           />
           <div className="snippet-container mx-auto my-12 w-full text-center">
             <Snippet>

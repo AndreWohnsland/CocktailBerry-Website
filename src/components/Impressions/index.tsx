@@ -14,21 +14,15 @@ const Impressions = () => {
     <>
       <section
         id="cocktailberry-ui"
-        className="relative z-10 bg-gray-light py-10 dark:bg-bg-color-dark"
+        className="section relative z-10 bg-gray-light dark:bg-bg-color-dark"
       >
         <div className="container">
-          <SectionTitle
-            title={t("ui.title")}
-            paragraph={t("ui.subtitle")}
-            center
-            width="665px"
-            mb="2rem"
-          />
-          <div className="mb-8 flex flex-row flex-wrap justify-center justify-items-center">
+          <SectionTitle title={t("ui.title")} paragraph={t("ui.subtitle")} />
+          <div className="mb-8 flex flex-wrap justify-center gap-6">
             {programImages.map((image) => (
               <div
                 key={image.viewKey}
-                className="basis-full p-1 lg:basis-1/2 2xl:basis-1/3"
+                className="w-full lg:w-[calc(50%-0.75rem)] 2xl:w-[calc(33.333%-1rem)]"
               >
                 <Image
                   src={image.src}
@@ -42,20 +36,17 @@ const Impressions = () => {
           <StreakBg />
         </div>
       </section>
-      <section id="cocktailberry-machines" className="relative z-10 py-10">
+      <section id="cocktailberry-machines" className="section relative z-10">
         <div className="container">
           <SectionTitle
             title={t("machines.title")}
             paragraph={t("machines.subtitle")}
-            center
-            width="665px"
-            mb="2rem"
           />
-          <div className="mb-8 flex flex-row flex-wrap justify-center justify-items-center">
+          <div className="mb-8 flex flex-wrap justify-center gap-6">
             {machineImages.map((image) => (
               <div
                 key={image.name}
-                className="basis-full p-1 lg:basis-1/2 2xl:basis-1/3"
+                className="w-full lg:w-[calc(50%-0.75rem)] 2xl:w-[calc(33.333%-1rem)]"
               >
                 <Image
                   src={image.src}

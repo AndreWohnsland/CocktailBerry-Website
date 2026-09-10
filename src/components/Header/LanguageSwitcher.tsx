@@ -67,7 +67,7 @@ const LanguageSwitcher = () => {
       </button>
 
       <div
-        className={`absolute top-full right-0 mt-2 w-40 overflow-hidden rounded-lg border border-stroke bg-white shadow-two transition-[opacity,translate,visibility] duration-200 dark:border-stroke-dark dark:bg-dark ${
+        className={`absolute inset-e-0 top-full mt-2 w-40 overflow-hidden rounded-lg border border-stroke bg-white shadow-two transition-[opacity,translate,visibility] duration-200 dark:border-stroke-dark dark:bg-dark ${
           isOpen ? "visible opacity-100" : "invisible -translate-y-1 opacity-0"
         }`}
       >
@@ -77,7 +77,7 @@ const LanguageSwitcher = () => {
             key={lang.code}
             onClick={() => switchLanguage(lang.code)}
             aria-current={locale === lang.code || undefined}
-            className={`flex w-full items-center gap-2 px-4 py-2 text-left text-sm transition-[background-color,color] duration-150 hover:bg-black/5 focus-visible:bg-black/5 focus-visible:outline-none dark:focus-visible:bg-white/5 dark:hover:bg-white/5 ${
+            className={`flex w-full items-center gap-2 px-4 py-2 text-start text-sm transition-[background-color,color] duration-150 hover:bg-black/5 focus-visible:bg-black/5 focus-visible:outline-none dark:focus-visible:bg-white/5 dark:hover:bg-white/5 ${
               locale === lang.code ? "font-semibold text-primary" : ""
             }`}
           >

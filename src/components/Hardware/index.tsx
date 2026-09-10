@@ -18,14 +18,11 @@ const Hardware = () => {
 
   return (
     <>
-      <section id="hardware-intro" className="relative z-10 pt-4 pb-6">
+      <section id="hardware-intro" className="section relative z-10">
         <div className="container">
           <SectionTitle
             title={t("intro.title")}
             paragraph={t("intro.subtitle")}
-            center
-            width="800px"
-            mb="2rem"
           />
           <div className="card mx-auto max-w-200 px-6 py-5 text-center">
             <p className="text-base text-body-color leading-relaxed md:text-lg">
@@ -58,15 +55,12 @@ const Hardware = () => {
 
       <section
         id="components"
-        className="relative z-10 bg-gray-light py-12 dark:bg-bg-color-dark"
+        className="section relative z-10 bg-gray-light dark:bg-bg-color-dark"
       >
         <div className="container">
           <SectionTitle
             title={t("components.title")}
             paragraph={t("components.subtitle")}
-            center
-            width="665px"
-            mb="3rem"
           />
           <div className="flex flex-wrap justify-center gap-6">
             {hardwareData(t).map((feature) => (
@@ -81,14 +75,11 @@ const Hardware = () => {
         </div>
       </section>
 
-      <section id="pumps" className="relative z-10 py-12">
+      <section id="pumps" className="section relative z-10">
         <div className="container">
           <SectionTitle
             title={t("pumps.title")}
             paragraph={t("pumps.subtitle")}
-            center
-            width="800px"
-            mb="3rem"
           />
           <div className="flex flex-wrap justify-center gap-6">
             {pumpData(t).map((feature) => (
@@ -109,7 +100,7 @@ const Hardware = () => {
 
       <section
         id="extensions"
-        className="relative z-10 bg-gray-light py-12 dark:bg-bg-color-dark"
+        className="section relative z-10 bg-gray-light dark:bg-bg-color-dark"
       >
         <div className="container">
           <div className="mx-auto max-w-200 text-center">
@@ -121,21 +112,18 @@ const Hardware = () => {
             <SectionTitle
               title={t("extensions.title")}
               paragraph={t("extensions.description")}
-              width="800px"
-              mb="0"
+              className="mb-0"
             />
           </div>
         </div>
       </section>
 
-      <section id="hardware-cta" className="relative z-10 py-16">
+      <section id="hardware-cta" className="section relative z-10">
         <div className="container">
           <div className="mx-auto max-w-200 text-center">
             <SectionTitle
               title={t("cta.title")}
               paragraph={t("cta.subtitle")}
-              width="800px"
-              mb="2.5rem"
             />
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link

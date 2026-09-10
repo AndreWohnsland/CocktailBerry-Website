@@ -35,7 +35,7 @@ const Breadcrumb = ({
                   >
                     {t("home")}
                   </Link>
-                  <span className="mx-2 block h-2 w-2 rotate-45 border-body-color border-t-2 border-r-2"></span>
+                  <span className="mx-2 block h-2 w-2 rotate-45 border-body-color border-t-2 border-r-2 rtl:rotate-225"></span>
                 </li>
                 <li className="font-medium text-base text-primary">
                   {pageName}

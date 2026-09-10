@@ -1,6 +1,6 @@
 const Imprint = () => {
   return (
-    <section id="imprint" className="overflow-hidden py-16 md:py-20 lg:py-28">
+    <section id="imprint" className="section-lg overflow-hidden">
       <div className="container">
         <h2 className="mb-4 font-bold text-black text-xl sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
           Angaben gemäß § 5 DDG

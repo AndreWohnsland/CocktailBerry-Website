@@ -31,7 +31,7 @@ export default function ScrollToTop() {
 
   return (
     <div
-      className={`fixed right-8 bottom-8 z-99 transition-[opacity,translate,visibility] duration-200 ${
+      className={`fixed inset-e-8 bottom-8 z-99 transition-[opacity,translate,visibility] duration-200 ${
         isVisible ? "visible opacity-100" : "invisible translate-y-1 opacity-0"
       }`}
     >

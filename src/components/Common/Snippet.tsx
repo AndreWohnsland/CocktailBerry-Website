@@ -67,10 +67,10 @@ const Snippet = ({ children, className = "" }: SnippetProps) => {
 
   return (
     <div
-      className={`inline-flex max-w-full items-center gap-3 rounded-lg border border-stroke bg-gray-light px-4 py-2 text-left font-mono text-sm dark:border-stroke-dark dark:bg-dark ${className}`}
+      className={`inline-flex max-w-full items-center gap-3 rounded-lg border border-stroke bg-gray-light px-4 py-2 text-start font-mono text-sm dark:border-stroke-dark dark:bg-dark ${className}`}
     >
       <span className="text-secondary">$</span>
-      <pre className="m-0 flex-1 overflow-x-auto whitespace-pre bg-transparent p-0 text-body-color dark:text-body-color-dark">
+      <pre className="m-0 min-w-0 flex-1 truncate bg-transparent p-0 text-body-color dark:text-body-color-dark">
         {text}
       </pre>
       <span className="group relative shrink-0">
@@ -84,7 +84,7 @@ const Snippet = ({ children, className = "" }: SnippetProps) => {
         </button>
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute -top-9 right-0 whitespace-nowrap rounded bg-gray-light px-2 py-1 font-sans text-dark text-xs opacity-0 shadow-md transition-opacity duration-150 group-focus-within:opacity-100 group-hover:opacity-100 dark:bg-dark dark:text-white"
+          className="pointer-events-none absolute inset-e-0 -top-9 whitespace-nowrap rounded bg-gray-light px-2 py-1 font-sans text-dark text-xs opacity-0 shadow-md transition-opacity duration-150 group-focus-within:opacity-100 group-hover:opacity-100 dark:bg-dark dark:text-white"
         >
           {label}
         </span>

@@ -16,16 +16,16 @@ const Footer = () => {
                 <Image
                   src="/images/logo/logo-2.svg"
                   alt="logo"
-                  className="w-full dark:hidden"
-                  width={140}
-                  height={30}
+                  className="dark:hidden"
+                  width={147}
+                  height={33}
                 />
                 <Image
                   src="/images/logo/logo.svg"
                   alt="logo"
-                  className="hidden w-full dark:block"
-                  width={140}
-                  height={30}
+                  className="hidden dark:block"
+                  width={147}
+                  height={33}
                 />
               </Link>
               <p className="mb-9 text-base text-body-color leading-relaxed dark:text-body-color-dark">
