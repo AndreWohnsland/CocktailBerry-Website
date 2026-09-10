@@ -93,20 +93,20 @@
     @apply bg-black text-white hover:bg-black/90 dark:bg-white/10 dark:hover:bg-white/5;
   }
 
+  .section {
+    @apply py-12 md:py-16;
+  }
+
+  .section-lg {
+    @apply py-16 md:py-20 lg:py-28;
+  }
+
   .card {
     @apply rounded-xl border border-stroke bg-white shadow-one dark:border-stroke-dark dark:bg-dark;
   }
 
   input[type="checkbox"]:checked ~ label span svg {
     @apply inline-flex;
-  }
-
-  .sticky .header-logo {
-    @apply py-5 lg:py-2;
-  }
-
-  .sticky .menu-scroll.active {
-    @apply opacity-70;
   }
 
   input#togglePlan:checked ~ .dot {
@@ -116,8 +116,4 @@
   input#checkboxLabel:checked ~ .box span {
     @apply opacity-100;
   }
-}
-
-.snippet-container pre:first-of-type {
-  overflow-x: auto;
 }

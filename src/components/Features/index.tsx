@@ -8,9 +8,9 @@ const Features = () => {
   const t = useTranslations("features");
 
   return (
-    <section id="features" className="py-16 md:py-20 lg:py-28">
+    <section id="features" className="section-lg">
       <div className="container">
-        <SectionTitle title={t("title")} paragraph={t("subtitle")} center />
+        <SectionTitle title={t("title")} paragraph={t("subtitle")} />
 
         <div className="flex flex-wrap justify-center gap-6">
           {featuresData(t).map((feature) => (

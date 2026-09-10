@@ -33,9 +33,9 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="relative z-10 bg-gray-light py-16 md:py-20 lg:py-28 dark:bg-bg-color-dark">
+    <section className="section-lg relative z-10 bg-gray-light dark:bg-bg-color-dark">
       <div className="container">
-        <SectionTitle title={t("title")} paragraph={t("subtitle")} center />
+        <SectionTitle title={t("title")} paragraph={t("subtitle")} />
 
         <div className="flex flex-wrap justify-center gap-6">
           {testimonialData.map((testimonial) => (

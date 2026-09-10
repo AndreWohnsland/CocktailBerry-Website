@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative z-10 overflow-hidden bg-white pt-30 pb-16 md:pt-37.5 md:pb-25 xl:pt-45 xl:pb-32.5 dark:bg-gray-dark"
+      className="relative z-10 overflow-hidden bg-white pt-24 pb-16 md:pt-30 md:pb-25 xl:pt-38 xl:pb-32.5 dark:bg-gray-dark"
     >
       <div className="container">
         <div className="mx-auto max-w-200 text-center">
@@ -41,9 +41,9 @@ const Hero = () => {
               ),
             })}
           </p>
-          {/* Mobile: full-width primary, then a 2x2 grid. From sm the grid
-              dissolves (`contents`) and all buttons flow in one row. */}
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
+          {/* Below lg: a centered stack of the primary button over a 2x2 grid. From lg
+              the grid dissolves (`contents`) and all five buttons flow in one row. */}
+          <div className="mx-auto flex max-w-md flex-col gap-3 lg:max-w-none lg:flex-row lg:flex-wrap lg:justify-center">
             <Link
               href={{ pathname: "/installation", hash: "prerequisite" }}
               className="btn btn-primary"
@@ -51,7 +51,7 @@ const Hero = () => {
               <LocalFireDepartmentIcon fontSize="small" />
               {t("getStarted")}
             </Link>
-            <div className="grid grid-cols-2 gap-3 sm:contents">
+            <div className="grid grid-cols-2 gap-3 lg:contents">
               <a
                 href="https://docs.cocktailberry.org/"
                 className="btn btn-secondary"

@@ -12,7 +12,7 @@ const Breadcrumb = ({
   const t = useTranslations("breadcrumb");
 
   return (
-    <section className="relative z-10 overflow-hidden pt-28 lg:pt-37.5">
+    <section className="relative z-10 overflow-hidden pt-22 lg:pt-30">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 md:w-8/12 lg:w-7/12">
@@ -35,7 +35,7 @@ const Breadcrumb = ({
                   >
                     {t("home")}
                   </Link>
-                  <span className="mx-2 block h-2 w-2 rotate-45 border-body-color border-t-2 border-r-2"></span>
+                  <span className="mx-2 block h-2 w-2 rotate-45 border-body-color border-t-2 border-r-2 rtl:rotate-225"></span>
                 </li>
                 <li className="font-medium text-base text-primary">
                   {pageName}
