@@ -12,7 +12,7 @@ const Features = () => {
       <div className="container">
         <SectionTitle title={t("title")} paragraph={t("subtitle")} />
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
           {featuresData(t).map((feature) => (
             <div
               key={feature.id}

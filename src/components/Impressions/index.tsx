@@ -18,7 +18,7 @@ const Impressions = () => {
       >
         <div className="container">
           <SectionTitle title={t("ui.title")} paragraph={t("ui.subtitle")} />
-          <div className="mb-8 flex flex-wrap justify-center gap-6">
+          <div className="mb-8 flex flex-wrap justify-center gap-4 md:gap-6">
             {programImages.map((image) => (
               <div
                 key={image.viewKey}
@@ -42,7 +42,7 @@ const Impressions = () => {
             title={t("machines.title")}
             paragraph={t("machines.subtitle")}
           />
-          <div className="mb-8 flex flex-wrap justify-center gap-6">
+          <div className="mb-8 flex flex-wrap justify-center gap-4 md:gap-6">
             {machineImages.map((image) => (
               <div
                 key={image.name}

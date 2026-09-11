@@ -2,6 +2,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* next/font sets --font-amaranth on <body>, so the token must be inlined into the
+   utility rather than resolved on :root. */
+@theme inline {
+  --font-display: var(--font-amaranth), sans-serif;
+}
+
 @theme {
   --breakpoint-xs: 450px;
   --breakpoint-sm: 575px;
@@ -10,7 +16,6 @@
   --breakpoint-xl: 1250px;
   --breakpoint-2xl: 1500px;
 
-  --font-display: "Amaranth", sans-serif;
 
   --color-black: #121723;
   --color-dark: #1d2430;
@@ -47,27 +52,6 @@
 @utility container {
   margin-inline: auto;
   padding-inline: 1rem;
-}
-
-@font-face {
-  font-family: "Amaranth";
-  src: url("../../public/fonts/Amaranth-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Amaranth";
-  src: url("../../public/fonts/Amaranth-Bold.ttf");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Amaranth";
-  src: url("../../public/fonts/Amaranth-Italic.ttf");
-  font-weight: normal;
-  font-style: italic;
 }
 
 @layer base {

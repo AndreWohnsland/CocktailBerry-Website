@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Amaranth, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -10,6 +10,11 @@ import { routing } from "@/i18n/routing";
 import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
+const amaranth = Amaranth({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-amaranth",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cocktailberry.org"),
@@ -115,7 +120,7 @@ export default async function LocaleLayout({
     <html suppressHydrationWarning lang={locale} data-scroll-behavior="smooth">
       <head />
       <body
-        className={`bg-[#FCFCFC] antialiased dark:bg-black ${inter.className}`}
+        className={`bg-[#FCFCFC] antialiased dark:bg-black ${inter.className} ${amaranth.variable}`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>

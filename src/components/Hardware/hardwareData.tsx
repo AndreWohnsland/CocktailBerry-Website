@@ -46,12 +46,12 @@ const hardwareData = (t: Translator): Feature[] => [
     paragraph: t("components.display.description"),
     resources: [
       {
-        name: '5" Touchscreen',
+        name: "5″ Touchscreen",
         url: "https://amzn.to/3K6Ntei",
         sponsored: true,
       },
       {
-        name: '7" Touchscreen',
+        name: "7″ Touchscreen",
         url: "https://amzn.to/49sKlnn",
         sponsored: true,
       },

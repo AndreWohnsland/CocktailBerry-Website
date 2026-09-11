@@ -1,15 +1,17 @@
 const Imprint = () => {
   return (
     <section id="imprint" className="section-lg overflow-hidden">
-      <div className="container">
-        <h2 className="mb-4 font-bold text-black text-xl sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
+      <div className="container max-w-[65ch]">
+        <h1 className="mb-4 font-bold font-display text-2xl text-black md:text-3xl dark:text-white">
           Angaben gemäß § 5 DDG
-        </h2>
-        <p>E-Mail: info@cocktailberry.org</p>
-        <h2 className="my-4 font-bold text-black text-xl sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
+        </h1>
+        <p className="text-base text-body-color leading-relaxed dark:text-body-color-dark">
+          E-Mail: info@cocktailberry.org
+        </p>
+        <h2 className="mt-8 mb-4 font-bold font-display text-2xl text-black md:text-3xl dark:text-white">
           Haftungsausschluss: Haftung für Inhalte
         </h2>
-        <p>
+        <p className="text-base text-body-color leading-relaxed dark:text-body-color-dark">
           Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für
           die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir
           jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7
@@ -25,10 +27,10 @@ const Imprint = () => {
           von entsprechenden Rechtsverletzungen werden wir diese Inhalte
           umgehend entfernen.
         </p>
-        <h2 className="my-4 font-bold text-black text-xl sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
+        <h2 className="mt-8 mb-4 font-bold font-display text-2xl text-black md:text-3xl dark:text-white">
           Haftung für Links
         </h2>
-        <p>
+        <p className="text-base text-body-color leading-relaxed dark:text-body-color-dark">
           Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren
           Inhalte wir keinen Einfluss haben. Deshalb können wir für diese
           fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
@@ -41,10 +43,10 @@ const Imprint = () => {
           Bekanntwerden von Rechtsverletzungen werden wir derartige Links
           umgehend entfernen.
         </p>
-        <h2 className="my-4 font-bold text-black text-xl sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
+        <h2 className="mt-8 mb-4 font-bold font-display text-2xl text-black md:text-3xl dark:text-white">
           Urheberrecht
         </h2>
-        <p>
+        <p className="text-base text-body-color leading-relaxed dark:text-body-color-dark">
           Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen
           Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung,
           Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
@@ -58,10 +60,10 @@ const Imprint = () => {
           entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen
           werden wir derartige Inhalte umgehend entfernen.
         </p>
-        <h2 className="my-4 font-bold text-black text-xl sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
+        <h2 className="mt-8 mb-4 font-bold font-display text-2xl text-black md:text-3xl dark:text-white">
           Google Analytics
         </h2>
-        <p>
+        <p className="text-base text-body-color leading-relaxed dark:text-body-color-dark">
           Diese Website benutzt Google Analytics, einen Webanalysedienst der
           Google Inc. (Google). Google Analytics verwendet sog. Cookies,
           Textdateien, die auf Ihrem Computer gespeichert werden und die eine
