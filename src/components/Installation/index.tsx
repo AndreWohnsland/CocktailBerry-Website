@@ -20,7 +20,7 @@ const Installation = () => {
             title={t("prerequisites.title")}
             paragraph={t("prerequisites.subtitle")}
           />
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {prerequisiteData(t).map((feature) => (
               <div
                 key={feature.id}
@@ -47,10 +47,7 @@ const Installation = () => {
           </div>
           <TiltStreakBg />
         </div>
-        <div
-          className="mx-auto w-full px-4 text-center"
-          style={{ maxWidth: "800px" }}
-        >
+        <div className="mx-auto w-full max-w-200 px-4 text-center">
           <p className="text-base text-body-color leading-relaxed! md:text-lg">
             {t("steps.afterInstall")}{" "}
             <a
@@ -68,10 +65,7 @@ const Installation = () => {
         <div className="snippet-container mx-auto my-12 w-full text-center">
           <Snippet>cd ~ && bash launcher.sh</Snippet>
         </div>
-        <div
-          className="mx-auto w-full px-4 text-center"
-          style={{ maxWidth: "800px" }}
-        >
+        <div className="mx-auto w-full max-w-200 px-4 text-center">
           <p className="text-base text-body-color leading-relaxed! md:text-lg">
             {t("steps.setupInstructions")}{" "}
             <a

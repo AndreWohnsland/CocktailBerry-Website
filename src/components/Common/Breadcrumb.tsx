@@ -17,7 +17,7 @@ const Breadcrumb = ({
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 md:w-8/12 lg:w-7/12">
             <div className="mb-8 max-w-142.5 md:mb-8 lg:mb-8">
-              <h1 className="mb-5 text-balance font-bold font-display text-3xl text-black sm:text-4xl dark:text-white">
+              <h1 className="mb-5 text-balance font-bold font-display text-4xl text-black sm:text-5xl dark:text-white">
                 {pageName}
               </h1>
               <p className="text-base text-body-color leading-relaxed dark:text-body-color-dark">

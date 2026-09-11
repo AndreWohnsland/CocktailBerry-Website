@@ -62,7 +62,7 @@ const Hardware = () => {
             title={t("components.title")}
             paragraph={t("components.subtitle")}
           />
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {hardwareData(t).map((feature) => (
               <div
                 key={feature.id}
@@ -81,7 +81,7 @@ const Hardware = () => {
             title={t("pumps.title")}
             paragraph={t("pumps.subtitle")}
           />
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {pumpData(t).map((feature) => (
               <div
                 key={feature.id}
